@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Quiz</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main>
+        <div id='quizType'>
+            <h1>THE COUNTRY QUIZ</h1>
+            <p>Test your knowledge of the names of the various countries in the world. <br> CHOOSE YOUR PREFERRED METHOD TO CONTINE</p>
+            <div id="buttDiv">
+                <button onclick=cquests()>Identify By Capital</button>
+                <button onclick=fquests()>Identify By Flag</button>
+            </div>
+        </div>
+
+        <div id="quizCard">
+            <h2>COUNTRY QUIZ</h2>
+            <img src="adventure.svg" alt="">
+            <div id="questionWrap">
+                <h4>Kuala Lumpur is the capital of</h4>
+                <div id="questions">
+                    <div>A <span>Vietnam</span> </div>
+                    <div>B <span>Malaysia</span> </div>
+                    <div>C <span>Sweden</span> </div>
+                    <div>D <span>Austria</span> </div>
+                </div>
+                <button onclick="nextBut()" id="nextButt">Next</button>
+                <button onclick="nextBut()" id="submitButt">Submit</button>
+                <button onclick="prevBut()" id="prevButt">Previous</button>
+            </div>
+        </div>
+    
+        <div id="doneCard">
+            <h2>COUNTRY QUIZ</h2>
+            <div id="doneWrap">
+                <img src="winner.svg" alt="">
+                <h1>Results</h1>
+                <p>You got <span>4</span> correct answers</p>
+                <button onclick="tryAgain()">Try again</button>
+            </div>
+        </div>
+    
+        <div id="flagCard">
+            <h2>COUNTRY QUIZ</h2>
+            <img src="adventure.svg" alt="">
+            <div id="questionWrap">
+                <div id="flag">
+                    
+                </div>
+                <h4>Which country does this flag belong to?</h4>
+                <div id="questions">
+                    <div>A <span>Vietnam</span> </div>
+                    <div>B <span>Malaysia</span> </div>
+                    <div>C <span>Sweden</span> </div>
+                    <div>D <span>Austria</span> </div>
+                </div>
+                <button onclick="nextBut()" id="nextButtf">Next</button>
+                <button onclick="nextBut()" id="submitButtf">Submit</button>
+                <button onclick="prevBut()" id="prevButtf">Previous</button>
+            </div>
+        </div>
+
+    </main>
+    
+    <script src="app.js"></script>
+</body>
+</html>
