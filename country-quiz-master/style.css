@@ -21,10 +21,14 @@ main{
     display: block;
 }
 
-#quizType h1{
+#headtext{
+    background: url('flags.jpg');
+    font-size: 100px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-size: 100px 60px;
+    color: transparent;
     margin: 0;
-    color: white;
-    text-shadow: 0 0 15px rgb(226, 227, 240) ;
 } 
 
 #quizType p{
@@ -59,14 +63,14 @@ main{
 
 
 
-/* THE COUNTRY TYPE CARD */
+/* THE COUNTRY TYPE CARD 1*/
 
 #quizCard{
     color: #5256A1;
     font-family: sans-serif;
     position: relative;
     width: 300px;
-    height: 350px;
+    height: 400px;
     display: none;
     cursor: pointer;
 }
@@ -96,7 +100,8 @@ main{
 }
 
 #quizCard h4{
-    margin: 15% 0 5% 0;
+    margin: 15% 0 5% 7%;
+    text-align: left;
 }
 
 #questions{
@@ -105,24 +110,25 @@ main{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    list-style-type: none;
 }
 
-#questions div span{
-    margin-left: 20px;
+#questions div #name1,#questions div #name2,#questions div #name3,#questions div #name4{
+    padding: 5px 5px;
+    margin-left: 10px;
 }
 
-#questions div{
-    list-style-type: none;
+#questions > div{
     width: 80%;
-    padding: 5px 0 5px 15px;
+    display: flex;
+    align-items: center;
+    padding: 5px 5px;
     text-align: left;
     border: 1px solid #5256A1;
     border-radius: 6px;
-    margin: 0 auto 15px auto;
+    margin: 0 auto 10px auto;
 }
 
-#questions div:hover{
+#questions .parentDiv:hover{
     background-color: #F9A826;
     color: white;
     border:none ;
@@ -139,8 +145,609 @@ main{
 }
 
 #questionWrap button:last-of-type{
+    right: 7%;
+    display: none;
+}
+
+
+
+
+/* THE COUNTRY TYPE CARD 2*/
+
+#quizCard1{
+    color: #5256A1;
+    font-family: sans-serif;
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: none;
+    cursor: pointer;
+}
+
+#quizCard1 h2{
+    margin: 0;
+    color: white;
+}
+
+#quizCard1 img{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -20px;
+    right: 0;
+    z-index: 10;
+}
+
+#questionWrap{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 90%;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#quizCard1 h4{
+    margin: 15% 0 5% 7%;
+    text-align: left;
+}
+
+#questions{
+    height: auto;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#questions div #name11,#questions div #name21,#questions div #name31,#questions div #name41{
+    padding: 5px 5px;
+    margin-left: 10px;
+}
+
+#questions > div{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    padding: 5px 5px;
+    text-align: left;
+    border: 1px solid #5256A1;
+    border-radius: 6px;
+    margin: 0 auto 10px auto;
+}
+
+#questions .parentDiv:hover{
+    background-color: #F9A826;
+    color: white;
+    border:none ;
+}
+
+#questionWrap button{
+    position: absolute;
+    right: 7%;
+    padding: 8px 14px;
+    border-radius: 4px;
+    background-color: #F9A826;
+    color: white;
+    border:none ;
+}
+
+#questionWrap button:last-of-type{
+    right: 7%;
+    display: none;
+}
+
+
+
+
+/* THE COUNTRY TYPE CARD 3*/
+
+#quizCard2{
+    color: #5256A1;
+    font-family: sans-serif;
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: none;
+    cursor: pointer;
+}
+
+#quizCard2 h2{
+    margin: 0;
+    color: white;
+}
+
+#quizCard2 img{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -20px;
+    right: 0;
+    z-index: 10;
+}
+
+#questionWrap{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 90%;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#quizCard2 h4{
+    margin: 15% 0 5% 7%;
+    text-align: left;
+}
+
+#questions{
+    height: auto;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#questions div #name12,#questions div #name22,#questions div #name32,#questions div #name42{
+    padding: 5px 5px;
+    margin-left: 10px;
+}
+
+#questions > div{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    padding: 5px 5px;
+    text-align: left;
+    border: 1px solid #5256A1;
+    border-radius: 6px;
+    margin: 0 auto 10px auto;
+}
+
+#questions .parentDiv:hover{
+    background-color: #F9A826;
+    color: white;
+    border:none ;
+}
+
+#questionWrap button{
+    position: absolute;
+    right: 7%;
+    padding: 8px 14px;
+    border-radius: 4px;
+    background-color: #F9A826;
+    color: white;
+    border:none ;
+}
+
+#questionWrap button:last-of-type{
+    right: 7%;
+    display: none;
+}
+
+
+
+
+/* THE COUNTRY TYPE CARD 4*/
+
+#quizCard3{
+    color: #5256A1;
+    font-family: sans-serif;
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: none;
+    cursor: pointer;
+}
+
+#quizCard3 h2{
+    margin: 0;
+    color: white;
+}
+
+#quizCard3 img{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -20px;
+    right: 0;
+    z-index: 10;
+}
+
+#questionWrap{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 90%;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#quizCard3 h4{
+    margin: 15% 0 5% 7%;
+    text-align: left;
+}
+
+#questions{
+    height: auto;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#questions div #name13,#questions div #name23,#questions div #name33,#questions div #name43{
+    padding: 5px 5px;
+    margin-left: 10px;
+}
+
+#questions > div{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    padding: 5px 5px;
+    text-align: left;
+    border: 1px solid #5256A1;
+    border-radius: 6px;
+    margin: 0 auto 10px auto;
+}
+
+#questions .parentDiv:hover{
+    background-color: #F9A826;
+    color: white;
+    border:none ;
+}
+
+#questionWrap button{
+    position: absolute;
+    right: 7%;
+    padding: 8px 14px;
+    border-radius: 4px;
+    background-color: #F9A826;
+    color: white;
+    border:none ;
+}
+
+#questionWrap button:last-of-type{
+    right: 7%;
+    display: none;
+}
+
+
+
+/* RESULT CARD  1*/
+
+#resultCard{
+    color: #5256A1;
+    font-family: sans-serif;
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: none;
+    cursor: pointer;
+}
+
+#resultCard h2{
+    margin: 0;
+    color: white;
+}
+
+#resultCard img{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -20px;
+    right: 0;
+    z-index: 10;
+}
+
+#questionWrap{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 90%;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#resultCard h4{
+    margin: 15% 0 5% 7%;
+    text-align: left;
+}
+
+#questions{
+    height: auto;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#questions div #namer1,#questions div #namer2,#questions div #namer3,#questions div #namer4{
+    padding: 5px 5px;
+    margin-left: 10px;
+}
+
+#questions > div{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    padding: 5px 5px;
+    text-align: left;
+    border: 1px solid #5256A1;
+    border-radius: 6px;
+    margin: 0 auto 10px auto;
+}
+
+#questionWrap button{
+    position: absolute;
+    right: 7%;
+    padding: 8px 14px;
+    border-radius: 4px;
+    background-color: #F9A826;
+    color: white;
+    border:none ;
+    margin-top: 10px;
+}
+
+#questionWrap button:last-of-type{
     left: 7%;
 }
+
+
+
+/* RESULT CARD  2*/
+
+#resultCard1{
+    color: #5256A1;
+    font-family: sans-serif;
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: none;
+    cursor: pointer;
+}
+
+#resultCard1 h2{
+    margin: 0;
+    color: white;
+}
+
+#resultCard1 img{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -20px;
+    right: 0;
+    z-index: 10;
+}
+
+#questionWrap{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 90%;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#resultCard1 h4{
+    margin: 15% 0 5% 7%;
+    text-align: left;
+}
+
+#questions{
+    height: auto;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#questions div #namer11,#questions div #namer21,#questions div #namer31,#questions div #namer41{
+    padding: 5px 5px;
+    margin-left: 10px;
+}
+
+#questions > div{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    padding: 5px 5px;
+    text-align: left;
+    border: 1px solid #5256A1;
+    border-radius: 6px;
+    margin: 0 auto 10px auto;
+}
+
+#questionWrap button{
+    position: absolute;
+    right: 7%;
+    padding: 8px 14px;
+    border-radius: 4px;
+    background-color: #F9A826;
+    color: white;
+    border:none ;
+    margin-top: 10px;
+}
+
+#questionWrap button:last-of-type{
+    left: 7%;
+}
+
+
+
+
+
+/* RESULT CARD  3*/
+
+#resultCard2{
+    color: #5256A1;
+    font-family: sans-serif;
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: none;
+    cursor: pointer;
+}
+
+#resultCard2 h2{
+    margin: 0;
+    color: white;
+}
+
+#resultCard2 img{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -20px;
+    right: 0;
+    z-index: 10;
+}
+
+#questionWrap{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 90%;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#resultCard2 h4{
+    margin: 15% 0 5% 7%;
+    text-align: left;
+}
+
+#questions{
+    height: auto;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#questions div #namer12,#questions div #namer22,#questions div #namer32,#questions div #namer42{
+    padding: 5px 5px;
+    margin-left: 10px;
+}
+
+#questions > div{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    padding: 5px 5px;
+    text-align: left;
+    border: 1px solid #5256A1;
+    border-radius: 6px;
+    margin: 0 auto 10px auto;
+}
+
+#questionWrap button{
+    position: absolute;
+    right: 7%;
+    padding: 8px 14px;
+    border-radius: 4px;
+    background-color: #F9A826;
+    color: white;
+    border:none ;
+    margin-top: 10px;
+}
+
+#questionWrap button:last-of-type{
+    left: 7%;
+}
+
+
+
+
+
+/* RESULT CARD  4*/
+
+#resultCard3{
+    color: #5256A1;
+    font-family: sans-serif;
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: none;
+    cursor: pointer;
+}
+
+#resultCard3 h2{
+    margin: 0;
+    color: white;
+}
+
+#resultCard3 img{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -20px;
+    right: 0;
+    z-index: 10;
+}
+
+#questionWrap{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 90%;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#resultCard3 h4{
+    margin: 15% 0 5% 7%;
+    text-align: left;
+}
+
+#questions{
+    height: auto;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#questions div #namer13,#questions div #namer23,#questions div #namer33,#questions div #namer43{
+    padding: 5px 5px;
+    margin-left: 10px;
+}
+
+#questions > div{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    padding: 5px 5px;
+    text-align: left;
+    border: 1px solid #5256A1;
+    border-radius: 6px;
+    margin: 0 auto 10px auto;
+}
+
+#questionWrap button{
+    position: absolute;
+    right: 7%;
+    padding: 8px 14px;
+    border-radius: 4px;
+    background-color: #F9A826;
+    color: white;
+    border:none ;
+    margin-top: 10px;
+}
+
+#questionWrap button:last-of-type{
+    left: 7%;
+}
+
 
 
 
@@ -195,7 +802,7 @@ main{
     text-align: left;
 }
 
-#questions{
+#questionsf{
     height: auto;
     box-sizing: border-box;
     display: flex;
@@ -204,11 +811,11 @@ main{
     list-style-type: none;
 }
 
-#questions div span{
+#questionsf div span{
     margin-left: 20px;
 }
 
-#questions div{
+#questionsf div{
     list-style-type: none;
     width: 80%;
     padding: 5px 0 5px 15px;
@@ -218,7 +825,7 @@ main{
     margin: 0 auto 15px auto;
 }
 
-#questions div:hover{
+#questionsf div:hover{
     background-color: #F9A826;
     color: white;
     border:none ;
@@ -235,7 +842,7 @@ main{
 }
 
 #questionWrap button:last-of-type{
-    left: 7%;
+    right: 7%;
 }
 
 

@@ -11,8 +11,8 @@
 
     <main>
         <div id='quizType'>
-            <h1>THE COUNTRY QUIZ</h1>
-            <p>Test your knowledge of the names of the various countries in the world. <br> CHOOSE YOUR PREFERRED METHOD TO CONTINE</p>
+            <h1 id="headtext">COUNTRY QUIZ</h1>
+            <p>Test your knowledge of the names of the various countries in the world. <br> CHOOSE YOUR PREFERRED METHOD TO CONTINUE</p>
             <div id="buttDiv">
                 <button onclick=cquests()>Identify By Capital</button>
                 <button onclick=fquests()>Identify By Flag</button>
@@ -23,16 +23,63 @@
             <h2>COUNTRY QUIZ</h2>
             <img src="adventure.svg" alt="">
             <div id="questionWrap">
-                <h4>Kuala Lumpur is the capital of</h4>
+                <h4><span id="countryName">Kuala Lumpur </span> is the capital of</h4>
                 <div id="questions">
-                    <div>A <span>Vietnam</span> </div>
-                    <div>B <span>Malaysia</span> </div>
-                    <div>C <span>Sweden</span> </div>
-                    <div>D <span>Austria</span> </div>
+                    <div class="parentDiv" onclick="choice1()">A <div id="name1">Vietnam</div> </div>
+                    <div class="parentDiv" onclick="choice2()">B <div id="name2">Malaysia</div> </div>
+                    <div class="parentDiv" onclick="choice3()">C <div id="name3">Sweden</div> </div>
+                    <div class="parentDiv" onclick="choice4()">D <div id="name4">Austria</div> </div>
                 </div>
                 <button onclick="nextBut()" id="nextButt">Next</button>
                 <button onclick="nextBut()" id="submitButt">Submit</button>
-                <button onclick="prevBut()" id="prevButt">Previous</button>
+            </div>
+        </div>
+
+        <div id="quizCard1">
+            <h2>COUNTRY QUIZ</h2>
+            <img src="adventure.svg" alt="">
+            <div id="questionWrap">
+                <h4><span id="countryName1">Kuala Lumpur </span> is the capital of</h4>
+                <div id="questions">
+                    <div class="parentDiv" onclick="choice11()">A <div id="name11">Vietnam</div> </div>
+                    <div class="parentDiv" onclick="choice21()">B <div id="name21">Malaysia</div> </div>
+                    <div class="parentDiv" onclick="choice31()">C <div id="name31">Sweden</div> </div>
+                    <div class="parentDiv" onclick="choice41()">D <div id="name41">Austria</div> </div>
+                </div>
+                <button onclick="nextBut()" id="nextButt">Next</button>
+                <button onclick="nextBut()" id="submitButt">Submit</button>
+            </div>
+        </div>
+
+        <div id="quizCard2">
+            <h2>COUNTRY QUIZ</h2>
+            <img src="adventure.svg" alt="">
+            <div id="questionWrap">
+                <h4><span id="countryName2">Kuala Lumpur </span> is the capital of</h4>
+                <div id="questions">
+                    <div class="parentDiv" onclick="choice12()">A <div id="name12">Vietnam</div> </div>
+                    <div class="parentDiv" onclick="choice22()">B <div id="name22">Malaysia</div> </div>
+                    <div class="parentDiv" onclick="choice32()">C <div id="name32">Sweden</div> </div>
+                    <div class="parentDiv" onclick="choice42()">D <div id="name42">Austria</div> </div>
+                </div>
+                <button onclick="nextBut()" id="nextButt">Next</button>
+                <button onclick="nextBut()" id="submitButt">Submit</button>
+            </div>
+        </div>
+
+        <div id="quizCard3">
+            <h2>COUNTRY QUIZ</h2>
+            <img src="adventure.svg" alt="">
+            <div id="questionWrap">
+                <h4><span id="countryName3">Kuala Lumpur </span> is the capital of</h4>
+                <div id="questions">
+                    <div class="parentDiv" onclick="choice13()">A <div id="name13">Vietnam</div> </div>
+                    <div class="parentDiv" onclick="choice23()">B <div id="name23">Malaysia</div> </div>
+                    <div class="parentDiv" onclick="choice33()">C <div id="name33">Sweden</div> </div>
+                    <div class="parentDiv" onclick="choice43()">D <div id="name43">Austria</div> </div>
+                </div>
+                <button onclick="nextBut()" id="nextButtlast">Next</button>
+                <button onclick="nextBut()" id="submitButt">Submit</button>
             </div>
         </div>
     
@@ -40,9 +87,73 @@
             <h2>COUNTRY QUIZ</h2>
             <div id="doneWrap">
                 <img src="winner.svg" alt="">
-                <h1>Results</h1>
-                <p>You got <span>4</span> correct answers</p>
+                <h1 onclick="resultShow()">Results</h1>
+                <p>You got <span id="correctCount">0</span> correct answers</p>
                 <button onclick="tryAgain()">Try again</button>
+            </div>
+        </div>
+
+        <div id="resultCard">
+            <h2>COUNTRY QUIZ</h2>
+            <img src="adventure.svg" alt="">
+            <div id="questionWrap">
+                <h4><span id="countryNamer">Kuala Lumpur </span> is the capital of</h4>
+                <div id="questions">
+                    <div class="parentDivr">A <div id="namer1"> </div> </div>
+                    <div class="parentDivr">B <div id="namer2"> </div> </div>
+                    <div class="parentDivr">C <div id="namer3"> </div> </div>
+                    <div class="parentDivr">D <div id="namer4"> </div> </div>
+                </div>
+                <button onclick="nextButr()" id="nextButtr">Next</button>
+                <button onclick="prevButr()" id="prevButt">Previous</button>
+            </div>
+        </div>
+
+        <div id="resultCard1">
+            <h2>COUNTRY QUIZ</h2>
+            <img src="adventure.svg" alt="">
+            <div id="questionWrap">
+                <h4><span id="countryNamer1">Kuala Lumpur </span> is the capital of</h4>
+                <div id="questions">
+                    <div class="parentDivr">A <div id="namer11"> </div> </div>
+                    <div class="parentDivr">B <div id="namer21"> </div> </div>
+                    <div class="parentDivr">C <div id="namer31"> </div> </div>
+                    <div class="parentDivr">D <div id="namer41"> </div> </div>
+                </div>
+                <button onclick="nextButr()" id="nextButtr">Next</button>
+                <button onclick="prevButr()" id="prevButt">Previous</button>
+            </div>
+        </div>
+
+        <div id="resultCard2">
+            <h2>COUNTRY QUIZ</h2>
+            <img src="adventure.svg" alt="">
+            <div id="questionWrap">
+                <h4><span id="countryNamer2">Kuala Lumpur </span> is the capital of</h4>
+                <div id="questions">
+                    <div class="parentDivr">A <div id="namer12"> </div> </div>
+                    <div class="parentDivr">B <div id="namer22"> </div> </div>
+                    <div class="parentDivr">C <div id="namer32"> </div> </div>
+                    <div class="parentDivr">D <div id="namer42"> </div> </div>
+                </div>
+                <button onclick="nextButr()" id="nextButtr">Next</button>
+                <button onclick="prevButr()" id="prevButt">Previous</button>
+            </div>
+        </div>
+
+        <div id="resultCard3">
+            <h2>COUNTRY QUIZ</h2>
+            <img src="adventure.svg" alt="">
+            <div id="questionWrap">
+                <h4><span id="countryNamer3">Kuala Lumpur </span> is the capital of</h4>
+                <div id="questions">
+                    <div class="parentDivr">A <div id="namer13"> </div> </div>
+                    <div class="parentDivr">B <div id="namer23"> </div> </div>
+                    <div class="parentDivr">C <div id="namer33"> </div> </div>
+                    <div class="parentDivr">D <div id="namer43"> </div> </div>
+                </div>
+                <button onclick="nextButr()" id="nextButtr0">Next</button>
+                <button onclick="prevButr()" id="prevButt">Previous</button>
             </div>
         </div>
     
@@ -54,7 +165,7 @@
                     
                 </div>
                 <h4>Which country does this flag belong to?</h4>
-                <div id="questions">
+                <div id="questionsf">
                     <div>A <span>Vietnam</span> </div>
                     <div>B <span>Malaysia</span> </div>
                     <div>C <span>Sweden</span> </div>
@@ -62,7 +173,6 @@
                 </div>
                 <button onclick="nextBut()" id="nextButtf">Next</button>
                 <button onclick="nextBut()" id="submitButtf">Submit</button>
-                <button onclick="prevBut()" id="prevButtf">Previous</button>
             </div>
         </div>
 
