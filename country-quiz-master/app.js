@@ -1,1064 +1,78 @@
-const countCap = `[
-    {
-      "name": "Afghanistan",
-      "capital": "Kabul"
-    },
-    {
-      "name": "Åland Islands",
-      "capital": "Mariehamn"
-    },
-    {
-      "name": "Albania",
-      "capital": "Tirana"
-    },
-    {
-      "name": "Algeria",
-      "capital": "Algiers"
-    },
-    {
-      "name": "American Samoa",
-      "capital": "Pago Pago"
-    },
-    {
-      "name": "Andorra",
-      "capital": "Andorra la Vella"
-    },
-    {
-      "name": "Angola",
-      "capital": "Luanda"
-    },
-    {
-      "name": "Anguilla",
-      "capital": "The Valley"
-    },
-    {
-      "name": "Antarctica",
-      "capital": ""
-    },
-    {
-      "name": "Antigua and Barbuda",
-      "capital": "Saint John's"
-    },
-    {
-      "name": "Argentina",
-      "capital": "Buenos Aires"
-    },
-    {
-      "name": "Armenia",
-      "capital": "Yerevan"
-    },
-    {
-      "name": "Aruba",
-      "capital": "Oranjestad"
-    },
-    {
-      "name": "Australia",
-      "capital": "Canberra"
-    },
-    {
-      "name": "Austria",
-      "capital": "Vienna"
-    },
-    {
-      "name": "Azerbaijan",
-      "capital": "Baku"
-    },
-    {
-      "name": "Bahamas",
-      "capital": "Nassau"
-    },
-    {
-      "name": "Bahrain",
-      "capital": "Manama"
-    },
-    {
-      "name": "Bangladesh",
-      "capital": "Dhaka"
-    },
-    {
-      "name": "Barbados",
-      "capital": "Bridgetown"
-    },
-    {
-      "name": "Belarus",
-      "capital": "Minsk"
-    },
-    {
-      "name": "Belgium",
-      "capital": "Brussels"
-    },
-    {
-      "name": "Belize",
-      "capital": "Belmopan"
-    },
-    {
-      "name": "Benin",
-      "capital": "Porto-Novo"
-    },
-    {
-      "name": "Bermuda",
-      "capital": "Hamilton"
-    },
-    {
-      "name": "Bhutan",
-      "capital": "Thimphu"
-    },
-    {
-      "name": "Bolivia (Plurinational State of)",
-      "capital": "Sucre"
-    },
-    {
-      "name": "Bonaire, Sint Eustatius and Saba",
-      "capital": "Kralendijk"
-    },
-    {
-      "name": "Bosnia and Herzegovina",
-      "capital": "Sarajevo"
-    },
-    {
-      "name": "Botswana",
-      "capital": "Gaborone"
-    },
-    {
-      "name": "Bouvet Island",
-      "capital": ""
-    },
-    {
-      "name": "Brazil",
-      "capital": "Brasília"
-    },
-    {
-      "name": "British Indian Ocean Territory",
-      "capital": "Diego Garcia"
-    },
-    {
-      "name": "United States Minor Outlying Islands",
-      "capital": ""
-    },
-    {
-      "name": "Virgin Islands (British)",
-      "capital": "Road Town"
-    },
-    {
-      "name": "Virgin Islands (U.S.)",
-      "capital": "Charlotte Amalie"
-    },
-    {
-      "name": "Brunei Darussalam",
-      "capital": "Bandar Seri Begawan"
-    },
-    {
-      "name": "Bulgaria",
-      "capital": "Sofia"
-    },
-    {
-      "name": "Burkina Faso",
-      "capital": "Ouagadougou"
-    },
-    {
-      "name": "Burundi",
-      "capital": "Bujumbura"
-    },
-    {
-      "name": "Cambodia",
-      "capital": "Phnom Penh"
-    },
-    {
-      "name": "Cameroon",
-      "capital": "Yaoundé"
-    },
-    {
-      "name": "Canada",
-      "capital": "Ottawa"
-    },
-    {
-      "name": "Cabo Verde",
-      "capital": "Praia"
-    },
-    {
-      "name": "Cayman Islands",
-      "capital": "George Town"
-    },
-    {
-      "name": "Central African Republic",
-      "capital": "Bangui"
-    },
-    {
-      "name": "Chad",
-      "capital": "N'Djamena"
-    },
-    {
-      "name": "Chile",
-      "capital": "Santiago"
-    },
-    {
-      "name": "China",
-      "capital": "Beijing"
-    },
-    {
-      "name": "Christmas Island",
-      "capital": "Flying Fish Cove"
-    },
-    {
-      "name": "Cocos (Keeling) Islands",
-      "capital": "West Island"
-    },
-    {
-      "name": "Colombia",
-      "capital": "Bogotá"
-    },
-    {
-      "name": "Comoros",
-      "capital": "Moroni"
-    },
-    {
-      "name": "Congo",
-      "capital": "Brazzaville"
-    },
-    {
-      "name": "Congo (Democratic Republic of the)",
-      "capital": "Kinshasa"
-    },
-    {
-      "name": "Cook Islands",
-      "capital": "Avarua"
-    },
-    {
-      "name": "Costa Rica",
-      "capital": "San José"
-    },
-    {
-      "name": "Croatia",
-      "capital": "Zagreb"
-    },
-    {
-      "name": "Cuba",
-      "capital": "Havana"
-    },
-    {
-      "name": "Curaçao",
-      "capital": "Willemstad"
-    },
-    {
-      "name": "Cyprus",
-      "capital": "Nicosia"
-    },
-    {
-      "name": "Czech Republic",
-      "capital": "Prague"
-    },
-    {
-      "name": "Denmark",
-      "capital": "Copenhagen"
-    },
-    {
-      "name": "Djibouti",
-      "capital": "Djibouti"
-    },
-    {
-      "name": "Dominica",
-      "capital": "Roseau"
-    },
-    {
-      "name": "Dominican Republic",
-      "capital": "Santo Domingo"
-    },
-    {
-      "name": "Ecuador",
-      "capital": "Quito"
-    },
-    {
-      "name": "Egypt",
-      "capital": "Cairo"
-    },
-    {
-      "name": "El Salvador",
-      "capital": "San Salvador"
-    },
-    {
-      "name": "Equatorial Guinea",
-      "capital": "Malabo"
-    },
-    {
-      "name": "Eritrea",
-      "capital": "Asmara"
-    },
-    {
-      "name": "Estonia",
-      "capital": "Tallinn"
-    },
-    {
-      "name": "Ethiopia",
-      "capital": "Addis Ababa"
-    },
-    {
-      "name": "Falkland Islands (Malvinas)",
-      "capital": "Stanley"
-    },
-    {
-      "name": "Faroe Islands",
-      "capital": "Tórshavn"
-    },
-    {
-      "name": "Fiji",
-      "capital": "Suva"
-    },
-    {
-      "name": "Finland",
-      "capital": "Helsinki"
-    },
-    {
-      "name": "France",
-      "capital": "Paris"
-    },
-    {
-      "name": "French Guiana",
-      "capital": "Cayenne"
-    },
-    {
-      "name": "French Polynesia",
-      "capital": "Papeetē"
-    },
-    {
-      "name": "French Southern Territories",
-      "capital": "Port-aux-Français"
-    },
-    {
-      "name": "Gabon",
-      "capital": "Libreville"
-    },
-    {
-      "name": "Gambia",
-      "capital": "Banjul"
-    },
-    {
-      "name": "Georgia",
-      "capital": "Tbilisi"
-    },
-    {
-      "name": "Germany",
-      "capital": "Berlin"
-    },
-    {
-      "name": "Ghana",
-      "capital": "Accra"
-    },
-    {
-      "name": "Gibraltar",
-      "capital": "Gibraltar"
-    },
-    {
-      "name": "Greece",
-      "capital": "Athens"
-    },
-    {
-      "name": "Greenland",
-      "capital": "Nuuk"
-    },
-    {
-      "name": "Grenada",
-      "capital": "St. George's"
-    },
-    {
-      "name": "Guadeloupe",
-      "capital": "Basse-Terre"
-    },
-    {
-      "name": "Guam",
-      "capital": "Hagåtña"
-    },
-    {
-      "name": "Guatemala",
-      "capital": "Guatemala City"
-    },
-    {
-      "name": "Guernsey",
-      "capital": "St. Peter Port"
-    },
-    {
-      "name": "Guinea",
-      "capital": "Conakry"
-    },
-    {
-      "name": "Guinea-Bissau",
-      "capital": "Bissau"
-    },
-    {
-      "name": "Guyana",
-      "capital": "Georgetown"
-    },
-    {
-      "name": "Haiti",
-      "capital": "Port-au-Prince"
-    },
-    {
-      "name": "Heard Island and McDonald Islands",
-      "capital": ""
-    },
-    {
-      "name": "Holy See",
-      "capital": "Rome"
-    },
-    {
-      "name": "Honduras",
-      "capital": "Tegucigalpa"
-    },
-    {
-      "name": "Hong Kong",
-      "capital": "City of Victoria"
-    },
-    {
-      "name": "Hungary",
-      "capital": "Budapest"
-    },
-    {
-      "name": "Iceland",
-      "capital": "Reykjavík"
-    },
-    {
-      "name": "India",
-      "capital": "New Delhi"
-    },
-    {
-      "name": "Indonesia",
-      "capital": "Jakarta"
-    },
-    {
-      "name": "Côte d'Ivoire",
-      "capital": "Yamoussoukro"
-    },
-    {
-      "name": "Iran (Islamic Republic of)",
-      "capital": "Tehran"
-    },
-    {
-      "name": "Iraq",
-      "capital": "Baghdad"
-    },
-    {
-      "name": "Ireland",
-      "capital": "Dublin"
-    },
-    {
-      "name": "Isle of Man",
-      "capital": "Douglas"
-    },
-    {
-      "name": "Israel",
-      "capital": "Jerusalem"
-    },
-    {
-      "name": "Italy",
-      "capital": "Rome"
-    },
-    {
-      "name": "Jamaica",
-      "capital": "Kingston"
-    },
-    {
-      "name": "Japan",
-      "capital": "Tokyo"
-    },
-    {
-      "name": "Jersey",
-      "capital": "Saint Helier"
-    },
-    {
-      "name": "Jordan",
-      "capital": "Amman"
-    },
-    {
-      "name": "Kazakhstan",
-      "capital": "Astana"
-    },
-    {
-      "name": "Kenya",
-      "capital": "Nairobi"
-    },
-    {
-      "name": "Kiribati",
-      "capital": "South Tarawa"
-    },
-    {
-      "name": "Kuwait",
-      "capital": "Kuwait City"
-    },
-    {
-      "name": "Kyrgyzstan",
-      "capital": "Bishkek"
-    },
-    {
-      "name": "Lao People's Democratic Republic",
-      "capital": "Vientiane"
-    },
-    {
-      "name": "Latvia",
-      "capital": "Riga"
-    },
-    {
-      "name": "Lebanon",
-      "capital": "Beirut"
-    },
-    {
-      "name": "Lesotho",
-      "capital": "Maseru"
-    },
-    {
-      "name": "Liberia",
-      "capital": "Monrovia"
-    },
-    {
-      "name": "Libya",
-      "capital": "Tripoli"
-    },
-    {
-      "name": "Liechtenstein",
-      "capital": "Vaduz"
-    },
-    {
-      "name": "Lithuania",
-      "capital": "Vilnius"
-    },
-    {
-      "name": "Luxembourg",
-      "capital": "Luxembourg"
-    },
-    {
-      "name": "Macao",
-      "capital": ""
-    },
-    {
-      "name": "Macedonia (the former Yugoslav Republic of)",
-      "capital": "Skopje"
-    },
-    {
-      "name": "Madagascar",
-      "capital": "Antananarivo"
-    },
-    {
-      "name": "Malawi",
-      "capital": "Lilongwe"
-    },
-    {
-      "name": "Malaysia",
-      "capital": "Kuala Lumpur"
-    },
-    {
-      "name": "Maldives",
-      "capital": "Malé"
-    },
-    {
-      "name": "Mali",
-      "capital": "Bamako"
-    },
-    {
-      "name": "Malta",
-      "capital": "Valletta"
-    },
-    {
-      "name": "Marshall Islands",
-      "capital": "Majuro"
-    },
-    {
-      "name": "Martinique",
-      "capital": "Fort-de-France"
-    },
-    {
-      "name": "Mauritania",
-      "capital": "Nouakchott"
-    },
-    {
-      "name": "Mauritius",
-      "capital": "Port Louis"
-    },
-    {
-      "name": "Mayotte",
-      "capital": "Mamoudzou"
-    },
-    {
-      "name": "Mexico",
-      "capital": "Mexico City"
-    },
-    {
-      "name": "Micronesia (Federated States of)",
-      "capital": "Palikir"
-    },
-    {
-      "name": "Moldova (Republic of)",
-      "capital": "Chișinău"
-    },
-    {
-      "name": "Monaco",
-      "capital": "Monaco"
-    },
-    {
-      "name": "Mongolia",
-      "capital": "Ulan Bator"
-    },
-    {
-      "name": "Montenegro",
-      "capital": "Podgorica"
-    },
-    {
-      "name": "Montserrat",
-      "capital": "Plymouth"
-    },
-    {
-      "name": "Morocco",
-      "capital": "Rabat"
-    },
-    {
-      "name": "Mozambique",
-      "capital": "Maputo"
-    },
-    {
-      "name": "Myanmar",
-      "capital": "Naypyidaw"
-    },
-    {
-      "name": "Namibia",
-      "capital": "Windhoek"
-    },
-    {
-      "name": "Nauru",
-      "capital": "Yaren"
-    },
-    {
-      "name": "Nepal",
-      "capital": "Kathmandu"
-    },
-    {
-      "name": "Netherlands",
-      "capital": "Amsterdam"
-    },
-    {
-      "name": "New Caledonia",
-      "capital": "Nouméa"
-    },
-    {
-      "name": "New Zealand",
-      "capital": "Wellington"
-    },
-    {
-      "name": "Nicaragua",
-      "capital": "Managua"
-    },
-    {
-      "name": "Niger",
-      "capital": "Niamey"
-    },
-    {
-      "name": "Nigeria",
-      "capital": "Abuja"
-    },
-    {
-      "name": "Niue",
-      "capital": "Alofi"
-    },
-    {
-      "name": "Norfolk Island",
-      "capital": "Kingston"
-    },
-    {
-      "name": "Korea (Democratic People's Republic of)",
-      "capital": "Pyongyang"
-    },
-    {
-      "name": "Northern Mariana Islands",
-      "capital": "Saipan"
-    },
-    {
-      "name": "Norway",
-      "capital": "Oslo"
-    },
-    {
-      "name": "Oman",
-      "capital": "Muscat"
-    },
-    {
-      "name": "Pakistan",
-      "capital": "Islamabad"
-    },
-    {
-      "name": "Palau",
-      "capital": "Ngerulmud"
-    },
-    {
-      "name": "Palestine, State of",
-      "capital": "Ramallah"
-    },
-    {
-      "name": "Panama",
-      "capital": "Panama City"
-    },
-    {
-      "name": "Papua New Guinea",
-      "capital": "Port Moresby"
-    },
-    {
-      "name": "Paraguay",
-      "capital": "Asunción"
-    },
-    {
-      "name": "Peru",
-      "capital": "Lima"
-    },
-    {
-      "name": "Philippines",
-      "capital": "Manila"
-    },
-    {
-      "name": "Pitcairn",
-      "capital": "Adamstown"
-    },
-    {
-      "name": "Poland",
-      "capital": "Warsaw"
-    },
-    {
-      "name": "Portugal",
-      "capital": "Lisbon"
-    },
-    {
-      "name": "Puerto Rico",
-      "capital": "San Juan"
-    },
-    {
-      "name": "Qatar",
-      "capital": "Doha"
-    },
-    {
-      "name": "Republic of Kosovo",
-      "capital": "Pristina"
-    },
-    {
-      "name": "Réunion",
-      "capital": "Saint-Denis"
-    },
-    {
-      "name": "Romania",
-      "capital": "Bucharest"
-    },
-    {
-      "name": "Russian Federation",
-      "capital": "Moscow"
-    },
-    {
-      "name": "Rwanda",
-      "capital": "Kigali"
-    },
-    {
-      "name": "Saint Barthélemy",
-      "capital": "Gustavia"
-    },
-    {
-      "name": "Saint Helena, Ascension and Tristan da Cunha",
-      "capital": "Jamestown"
-    },
-    {
-      "name": "Saint Kitts and Nevis",
-      "capital": "Basseterre"
-    },
-    {
-      "name": "Saint Lucia",
-      "capital": "Castries"
-    },
-    {
-      "name": "Saint Martin (French part)",
-      "capital": "Marigot"
-    },
-    {
-      "name": "Saint Pierre and Miquelon",
-      "capital": "Saint-Pierre"
-    },
-    {
-      "name": "Saint Vincent and the Grenadines",
-      "capital": "Kingstown"
-    },
-    {
-      "name": "Samoa",
-      "capital": "Apia"
-    },
-    {
-      "name": "San Marino",
-      "capital": "City of San Marino"
-    },
-    {
-      "name": "Sao Tome and Principe",
-      "capital": "São Tomé"
-    },
-    {
-      "name": "Saudi Arabia",
-      "capital": "Riyadh"
-    },
-    {
-      "name": "Senegal",
-      "capital": "Dakar"
-    },
-    {
-      "name": "Serbia",
-      "capital": "Belgrade"
-    },
-    {
-      "name": "Seychelles",
-      "capital": "Victoria"
-    },
-    {
-      "name": "Sierra Leone",
-      "capital": "Freetown"
-    },
-    {
-      "name": "Singapore",
-      "capital": "Singapore"
-    },
-    {
-      "name": "Sint Maarten (Dutch part)",
-      "capital": "Philipsburg"
-    },
-    {
-      "name": "Slovakia",
-      "capital": "Bratislava"
-    },
-    {
-      "name": "Slovenia",
-      "capital": "Ljubljana"
-    },
-    {
-      "name": "Solomon Islands",
-      "capital": "Honiara"
-    },
-    {
-      "name": "Somalia",
-      "capital": "Mogadishu"
-    },
-    {
-      "name": "South Africa",
-      "capital": "Pretoria"
-    },
-    {
-      "name": "South Georgia and the South Sandwich Islands",
-      "capital": "King Edward Point"
-    },
-    {
-      "name": "Korea (Republic of)",
-      "capital": "Seoul"
-    },
-    {
-      "name": "South Sudan",
-      "capital": "Juba"
-    },
-    {
-      "name": "Spain",
-      "capital": "Madrid"
-    },
-    {
-      "name": "Sri Lanka",
-      "capital": "Colombo"
-    },
-    {
-      "name": "Sudan",
-      "capital": "Khartoum"
-    },
-    {
-      "name": "Suriname",
-      "capital": "Paramaribo"
-    },
-    {
-      "name": "Svalbard and Jan Mayen",
-      "capital": "Longyearbyen"
-    },
-    {
-      "name": "Swaziland",
-      "capital": "Lobamba"
-    },
-    {
-      "name": "Sweden",
-      "capital": "Stockholm"
-    },
-    {
-      "name": "Switzerland",
-      "capital": "Bern"
-    },
-    {
-      "name": "Syrian Arab Republic",
-      "capital": "Damascus"
-    },
-    {
-      "name": "Taiwan",
-      "capital": "Taipei"
-    },
-    {
-      "name": "Tajikistan",
-      "capital": "Dushanbe"
-    },
-    {
-      "name": "Tanzania, United Republic of",
-      "capital": "Dodoma"
-    },
-    {
-      "name": "Thailand",
-      "capital": "Bangkok"
-    },
-    {
-      "name": "Timor-Leste",
-      "capital": "Dili"
-    },
-    {
-      "name": "Togo",
-      "capital": "Lomé"
-    },
-    {
-      "name": "Tokelau",
-      "capital": "Fakaofo"
-    },
-    {
-      "name": "Tonga",
-      "capital": "Nuku'alofa"
-    },
-    {
-      "name": "Trinidad and Tobago",
-      "capital": "Port of Spain"
-    },
-    {
-      "name": "Tunisia",
-      "capital": "Tunis"
-    },
-    {
-      "name": "Turkey",
-      "capital": "Ankara"
-    },
-    {
-      "name": "Turkmenistan",
-      "capital": "Ashgabat"
-    },
-    {
-      "name": "Turks and Caicos Islands",
-      "capital": "Cockburn Town"
-    },
-    {
-      "name": "Tuvalu",
-      "capital": "Funafuti"
-    },
-    {
-      "name": "Uganda",
-      "capital": "Kampala"
-    },
-    {
-      "name": "Ukraine",
-      "capital": "Kiev"
-    },
-    {
-      "name": "United Arab Emirates",
-      "capital": "Abu Dhabi"
-    },
-    {
-      "name": "United Kingdom of Great Britain and Northern Ireland",
-      "capital": "London"
-    },
-    {
-      "name": "United States of America",
-      "capital": "Washington, D.C."
-    },
-    {
-      "name": "Uruguay",
-      "capital": "Montevideo"
-    },
-    {
-      "name": "Uzbekistan",
-      "capital": "Tashkent"
-    },
-    {
-      "name": "Vanuatu",
-      "capital": "Port Vila"
-    },
-    {
-      "name": "Venezuela (Bolivarian Republic of)",
-      "capital": "Caracas"
-    },
-    {
-      "name": "Viet Nam",
-      "capital": "Hanoi"
-    },
-    {
-      "name": "Wallis and Futuna",
-      "capital": "Mata-Utu"
-    },
-    {
-      "name": "Western Sahara",
-      "capital": "El Aaiún"
-    },
-    {
-      "name": "Yemen",
-      "capital": "Sana'a"
-    },
-    {
-      "name": "Zambia",
-      "capital": "Lusaka"
-    },
-    {
-      "name": "Zimbabwe",
-      "capital": "Harare"
-    }
-  ]`
 
   const quizType = document.getElementById('quizType')
   const quizCard = document.getElementById('quizCard')
   const flagCard = document.getElementById('flagCard')
+  const flagCard1 = document.getElementById('flagCard1')
+  const flagCard2 = document.getElementById('flagCard2')
+  const flagCard3 = document.getElementById('flagCard3')
   const resultCard = document.getElementById('resultCard')
   const resultCard1 = document.getElementById('resultCard1')
   const resultCard2 = document.getElementById('resultCard2')
   const resultCard3 = document.getElementById('resultCard3')
   const doneCard = document.getElementById('doneCard')
-  const nextButt = document.getElementById('nextButt')
+  const doneCardf = document.getElementById('doneCardf')
+  const nextButt1 = document.getElementById('nextButt1')
+  const nextButt2 = document.getElementById('nextButt2')
+  const nextButt3 = document.getElementById('nextButt3')
   const nextButtlast = document.getElementById('nextButtlast')
   const nextButtr = document.getElementById('nextButtr')
   const nextButtr0 = document.getElementById('nextButtr0')
   const prevButt = document.getElementById('prevButt')
-  const nextButtf = document.getElementById('nextButtf')
+  const nextButtf1 = document.getElementById('nextButtf1')
+  const nextButtf2 = document.getElementById('nextButtf2')
+  const nextButtf3 = document.getElementById('nextButtf3')
+  const nextButtf4 = document.getElementById('nextButtf4')
   const submitButt = document.getElementById('submitButt')
-  const submitButtf = document.getElementById('submitButtf')
   let clickCount = 0 
 
-const randomCountry = JSON.parse(countCap)
-
-document.getElementById('countryName').innerHTML = JSON.parse(countCap)[10].capital
-document.getElementById('name1').innerHTML = randomCountry[153].name
-document.getElementById('name2').innerHTML = randomCountry[171].name.split(' ', 1)
-if(document.getElementById('name2').innerHTML.endsWith(',') || document.getElementById('name2').innerHTML.endsWith('(')){
-  document.getElementById('name2').innerHTML = document.getElementById('name2').innerHTML.slice(0, document.getElementById('name2').innerHTML.length-1)
-}
-document.getElementById('name3').innerHTML = randomCountry[135].name
-document.getElementById('name4').innerHTML = randomCountry[10].name
-
-document.getElementById('countryNamer').innerHTML = JSON.parse(countCap)[10].capital
-document.getElementById('namer1').innerHTML = randomCountry[153].name
-document.getElementById('namer2').innerHTML = randomCountry[171].name.split(' ', 1)
-if(document.getElementById('namer2').innerHTML.endsWith(',') || document.getElementById('name2').innerHTML.endsWith('(')){
-  document.getElementById('namer2').innerHTML = document.getElementById('name2').innerHTML.slice(0, document.getElementById('name2').innerHTML.length-1)
-}
-document.getElementById('namer3').innerHTML = randomCountry[135].name
-document.getElementById('namer4').innerHTML = randomCountry[10].name
 
 
-const outerDiv1 = document.getElementById('name1').parentElement
-const outerDiv2 = document.getElementById('name2').parentElement
-const outerDiv3 = document.getElementById('name3').parentElement
-const outerDiv4 = document.getElementById('name4').parentElement
 
-const outerDiv11 = document.getElementById('name11').parentElement
-const outerDiv21 = document.getElementById('name21').parentElement
-const outerDiv31 = document.getElementById('name31').parentElement
-const outerDiv41 = document.getElementById('name41').parentElement
+  const outerDiv1 = document.getElementById('name1').parentElement
+  const outerDiv2 = document.getElementById('name2').parentElement
+  const outerDiv3 = document.getElementById('name3').parentElement
+  const outerDiv4 = document.getElementById('name4').parentElement
+  
+  const outerDiv11 = document.getElementById('name11').parentElement
+  const outerDiv21 = document.getElementById('name21').parentElement
+  const outerDiv31 = document.getElementById('name31').parentElement
+  const outerDiv41 = document.getElementById('name41').parentElement
+  
+  const outerDiv12 = document.getElementById('name12').parentElement
+  const outerDiv22 = document.getElementById('name22').parentElement
+  const outerDiv32 = document.getElementById('name32').parentElement
+  const outerDiv42 = document.getElementById('name42').parentElement
+  
+  const outerDiv13 = document.getElementById('name13').parentElement
+  const outerDiv23 = document.getElementById('name23').parentElement
+  const outerDiv33 = document.getElementById('name33').parentElement
+  const outerDiv43 = document.getElementById('name43').parentElement
 
-const outerDiv12 = document.getElementById('name12').parentElement
-const outerDiv22 = document.getElementById('name22').parentElement
-const outerDiv32 = document.getElementById('name32').parentElement
-const outerDiv42 = document.getElementById('name42').parentElement
 
-const outerDiv13 = document.getElementById('name13').parentElement
-const outerDiv23 = document.getElementById('name23').parentElement
-const outerDiv33 = document.getElementById('name33').parentElement
-const outerDiv43 = document.getElementById('name43').parentElement
+
+
+  const flagDiv1 = document.getElementById('namef1').parentElement
+  const flagDiv2 = document.getElementById('namef2').parentElement
+  const flagDiv3 = document.getElementById('namef3').parentElement
+  const flagDiv4 = document.getElementById('namef4').parentElement
+  
+  const flagDiv11 = document.getElementById('namef11').parentElement
+  const flagDiv21 = document.getElementById('namef21').parentElement
+  const flagDiv31 = document.getElementById('namef31').parentElement
+  const flagDiv41 = document.getElementById('namef41').parentElement
+  
+  const flagDiv12 = document.getElementById('namef12').parentElement
+  const flagDiv22 = document.getElementById('namef22').parentElement
+  const flagDiv32 = document.getElementById('namef32').parentElement
+  const flagDiv42 = document.getElementById('namef42').parentElement
+  
+  const flagDiv13 = document.getElementById('namef13').parentElement
+  const flagDiv23 = document.getElementById('namef23').parentElement
+  const flagDiv33 = document.getElementById('namef33').parentElement
+  const flagDiv43 = document.getElementById('namef43').parentElement
+
+
+
 
 const outerDivr1 = document.getElementById('namer1').parentElement
 const outerDivr2 = document.getElementById('namer2').parentElement
@@ -1081,18 +95,33 @@ const outerDivr33 = document.getElementById('namer33').parentElement
 const outerDivr43 = document.getElementById('namer43').parentElement
 
 
-let correctCount = document.getElementById('correctCount').innerHTML
+let correctCount = document.getElementById('correctCount')
+let correctCountf = document.getElementById('correctCountf')
+let addone = 0
+let addtwo = 0
+let addthree = 0
+let addfour = 0           //values to be added together to get the results of the quiz
 
+nextButt1.disabled = true       // to disable the next buttons
+   
+if(nextButt1.disabled = true){    // to style the disabled next buttons
+  nextButt1.style.opacity = 0.7
+}
+
+nextButtf1.disabled = true       // to disable the next buttons
+   
+if(nextButtf1.disabled = true){    // to style the disabled next buttons
+  nextButtf1.style.opacity = 0.5
+}
+
+//CHOICE CONFIGURATION FOR THE FIRST QUESTION
 function choice1(){
-  // if(document.getElementById('name1').innerHTML === randomCountry[10].name){
-  //   correctCount.innerHTML  = parseInt(correctCount.innerHTML) + 1
-  // }else{
-  //   if(document.getElementById('name1').innerHTML !== randomCountry[10].name){
-  //     correctCount.innerHTML  = parseInt(correctCount.innerHTML) + 0
-  //   }
-  // }
+  
+nextButt1.disabled = false
+  nextButt1.style.opacity = 1
+  addone = 0
 
-  outerDiv1.style.backgroundColor = '#F9A826'
+  outerDiv1.style.backgroundColor = '#F9A826'     //to select an option
   outerDiv1.style.color = 'white'
   outerDiv1.style.border = 'none'
 
@@ -1126,15 +155,34 @@ function choice1(){
     outerDivr4.style.border = 'none'
     
 }
+function flagged1(){
+  nextButtf1.disabled = false  
+  nextButtf1.style.opacity = 1
+  addone = 0
+
+
+  flagDiv1.style.backgroundColor = '#F9A826'
+  flagDiv1.style.color = 'white'
+  flagDiv1.style.border = 'none'
+
+  flagDiv2.style.backgroundColor = 'white'
+  flagDiv2.style.color = '#5256A1'
+  flagDiv2.style.border = '1px solid #5256A1'
+  
+  flagDiv3.style.backgroundColor = 'white'
+  flagDiv3.style.color = '#5256A1'
+  flagDiv3.style.border = '1px solid #5256A1'
+  
+  flagDiv4.style.backgroundColor = 'white'
+  flagDiv4.style.color = '#5256A1'
+  flagDiv4.style.border = '1px solid #5256A1'
+}
 
 function choice2(){
-  // if(document.getElementById('name2').innerHTML === randomCountry[10].name){
-  //   correctCount.innerHTML  = parseInt(correctCount.innerHTML) + 1
-  // }else{
-  //   if(document.getElementById('name2').innerHTML !== randomCountry[10].name){
-  //     correctCount.innerHTML  = parseInt(correctCount.innerHTML) + 0
-  //   }
-  // }
+  addone = 0
+  
+nextButt1.disabled = false
+nextButt1.style.opacity = 1
 
   outerDiv2.style.backgroundColor = '#F9A826'
   outerDiv2.style.color = 'white'
@@ -1171,15 +219,35 @@ function choice2(){
   outerDivr1.style.border = '1px solid #5256A1'
 
 }
+function flagged2(){
+  nextButtf1.disabled = false  
+  nextButtf1.style.opacity = 1
+  addone = 1
+
+
+  flagDiv2.style.backgroundColor = '#F9A826'
+  flagDiv2.style.color = 'white'
+  flagDiv2.style.border = 'none'
+
+  flagDiv1.style.backgroundColor = 'white'
+  flagDiv1.style.color = '#5256A1'
+  flagDiv1.style.border = '1px solid #5256A1'
+  
+  flagDiv3.style.backgroundColor = 'white'
+  flagDiv3.style.color = '#5256A1'
+  flagDiv3.style.border = '1px solid #5256A1'
+  
+  flagDiv4.style.backgroundColor = 'white'
+  flagDiv4.style.color = '#5256A1'
+  flagDiv4.style.border = '1px solid #5256A1'
+}
 
 function choice3(){
-  // if(document.getElementById('name3').innerHTML === randomCountry[10].name){
-  //   correctCount.innerHTML  = parseInt(correctCount.innerHTML) + 1
-  // }else{
-  //   if(document.getElementById('name3').innerHTML !== randomCountry[10].name){
-  //     correctCount.innerHTML  = parseInt(correctCount.innerHTML) + 0
-  //   }
-  // }
+  addone = 0
+  nextButt1.style.opacity = 1
+  
+nextButt1.disabled = false
+  
 
   outerDiv3.style.backgroundColor = '#F9A826'
   outerDiv3.style.color = 'white'
@@ -1217,19 +285,35 @@ function choice3(){
   outerDivr2.style.border = '1px solid #5256A1'
   
 }
+function flagged3(){
+  nextButtf1.disabled = false  
+  nextButtf1.style.opacity = 1
+  addone = 0
 
-let callCount = 0
-function choice4(){
-  callCount += 1
-  correctCount = parseInt(correctCount) + 1
-  if(callCount > 1){
-    correctCount = correctCount - 1
-  }
-  console.log(correctCount)
 
-console.log('callTmes =' + callCount)
+  flagDiv3.style.backgroundColor = '#F9A826'
+  flagDiv3.style.color = 'white'
+  flagDiv3.style.border = 'none'
+
+  flagDiv2.style.backgroundColor = 'white'
+  flagDiv2.style.color = '#5256A1'
+  flagDiv2.style.border = '1px solid #5256A1'
   
+  flagDiv1.style.backgroundColor = 'white'
+  flagDiv1.style.color = '#5256A1'
+  flagDiv1.style.border = '1px solid #5256A1'
+  
+  flagDiv4.style.backgroundColor = 'white'
+  flagDiv4.style.color = '#5256A1'
+  flagDiv4.style.border = '1px solid #5256A1'
+}
 
+function choice4(){
+  addone = 1
+  
+  nextButt1.disabled = false
+  nextButt1.style.opacity = 1
+  
   outerDiv4.style.backgroundColor = '#F9A826'
   outerDiv4.style.color = 'white'
   outerDiv4.style.border = 'none'
@@ -1267,19 +351,47 @@ console.log('callTmes =' + callCount)
   
 
 }
+function flagged4(){
+  nextButtf1.disabled = false  
+  nextButtf1.style.opacity = 1
+  addone = 0
 
 
+  flagDiv4.style.backgroundColor = '#F9A826'
+  flagDiv4.style.color = 'white'
+  flagDiv4.style.border = 'none'
 
+  flagDiv2.style.backgroundColor = 'white'
+  flagDiv2.style.color = '#5256A1'
+  flagDiv2.style.border = '1px solid #5256A1'
+  
+  flagDiv3.style.backgroundColor = 'white'
+  flagDiv3.style.color = '#5256A1'
+  flagDiv3.style.border = '1px solid #5256A1'
+  
+  flagDiv1.style.backgroundColor = 'white'
+  flagDiv1.style.color = '#5256A1'
+  flagDiv1.style.border = '1px solid #5256A1'
+}
+
+nextButt2.disabled = true
+   
+if(nextButt2.disabled = true){
+  nextButt2.style.opacity = 0.7
+}
+
+nextButtf2.disabled = true       // to disable the next buttons
+   
+if(nextButtf2.disabled = true){    // to style the disabled next buttons
+  nextButtf2.style.opacity = 0.5
+}
+
+
+//CHOICE CONFIGURATION FOR THE SECOND QUESTION
 function choice11(){
-  // if(document.getElementById('name1').innerHTML === randomCountry[50].name){
-  //   correctCount.innerHTML  = parseInt(correctCount.innerHTML) + 1
-  // }else{
-  //   if(document.getElementById('name1').innerHTML !== randomCountry[50].name){
-  //     correctCount.innerHTML  = parseInt(correctCount.innerHTML) + 0
-  //   }
-  // }
-
-  // console.log(correctCount.innerHTML)
+  nextButt2.disabled = false
+  nextButt2.style.opacity = 1
+  addtwo = 0
 
   outerDiv11.style.backgroundColor = '#F9A826'
   outerDiv11.style.color = 'white'
@@ -1318,15 +430,33 @@ function choice11(){
 
 
 }
+function flagged11(){
+  nextButtf2.disabled = false
+  nextButtf2.style.opacity = 1
+  addtwo = 0
+
+  flagDiv11.style.backgroundColor = '#F9A826'
+  flagDiv11.style.color = 'white'
+  flagDiv11.style.border = 'none'
+
+  flagDiv21.style.backgroundColor = 'white'
+  flagDiv21.style.color = '#5256A1'
+  flagDiv21.style.border = '1px solid #5256A1'
+  
+  flagDiv31.style.backgroundColor = 'white'
+  flagDiv31.style.color = '#5256A1'
+  flagDiv31.style.border = '1px solid #5256A1'
+  
+  flagDiv41.style.backgroundColor = 'white'
+  flagDiv41.style.color = '#5256A1'
+  flagDiv41.style.border = '1px solid #5256A1'
+
+}
 
 function choice21(){
-  // if(document.getElementById('name2').innerHTML === randomCountry[50].name){
-  //   correctCount.innerHTML  = parseInt(correctCount.innerHTML) + 1
-  // }else{
-  //   if(document.getElementById('name2').innerHTML !== randomCountry[50].name){
-  //     correctCount.innerHTML  = parseInt(correctCount.innerHTML) + 0
-  //   }
-  // }
+  nextButt2.disabled = false
+  nextButt2.style.opacity = 1
+  addtwo = 0
 
   outerDiv21.style.backgroundColor = '#F9A826'
   outerDiv21.style.color = 'white'
@@ -1366,17 +496,33 @@ function choice21(){
 
   
 }
+function flagged21(){
+  nextButtf2.disabled = false
+  nextButtf2.style.opacity = 1
+  addtwo = 0
 
-let callCount1 = 0
+  flagDiv21.style.backgroundColor = '#F9A826'
+  flagDiv21.style.color = 'white'
+  flagDiv21.style.border = 'none'
+
+  flagDiv11.style.backgroundColor = 'white'
+  flagDiv11.style.color = '#5256A1'
+  flagDiv11.style.border = '1px solid #5256A1'
+  
+  flagDiv31.style.backgroundColor = 'white'
+  flagDiv31.style.color = '#5256A1'
+  flagDiv31.style.border = '1px solid #5256A1'
+  
+  flagDiv41.style.backgroundColor = 'white'
+  flagDiv41.style.color = '#5256A1'
+  flagDiv41.style.border = '1px solid #5256A1'
+
+}
+
 function choice31(){
-  callCount1 += 1
-  correctCount = parseInt(correctCount) + 1
-  if(callCount > 1){
-    correctCount = correctCount - 1
-  }
-  console.log(correctCount)
-
-console.log('callTmes =' + callCount1)
+  nextButt2.disabled = false
+  nextButt2.style.opacity = 1
+  addtwo = 1
 
 
   outerDiv31.style.backgroundColor = '#F9A826'
@@ -1416,13 +562,34 @@ console.log('callTmes =' + callCount1)
 
 
 }
+function flagged31(){
+  nextButtf2.disabled = false
+  nextButtf2.style.opacity = 1
+  addtwo = 0
+
+
+  flagDiv31.style.backgroundColor = '#F9A826'
+  flagDiv31.style.color = 'white'
+  flagDiv31.style.border = 'none'
+
+  flagDiv21.style.backgroundColor = 'white'
+  flagDiv21.style.color = '#5256A1'
+  flagDiv21.style.border = '1px solid #5256A1'
+  
+  flagDiv11.style.backgroundColor = 'white'
+  flagDiv11.style.color = '#5256A1'
+  flagDiv11.style.border = '1px solid #5256A1'
+  
+  flagDiv41.style.backgroundColor = 'white'
+  flagDiv41.style.color = '#5256A1'
+  flagDiv41.style.border = '1px solid #5256A1'
+
+}
 
 function choice41(){
-  // if(document.getElementById('name4').innerHTML === randomCountry[50].name){
-  //   correctCount.innerHTML  = parseInt(correctCount.innerHTML) + 1
-  // }else if(document.getElementById('name4').innerHTML !== randomCountry[50].name){
-  //     correctCount.innerHTML  = parseInt(correctCount.innerHTML) + 0
-  //   }
+  nextButt2.disabled = false
+  nextButt2.style.opacity = 1
+  addtwo = 0
 
     outerDiv41.style.backgroundColor = '#F9A826'
     outerDiv41.style.color = 'white'
@@ -1461,19 +628,47 @@ function choice41(){
   
   
 }
+function flagged41(){
+  nextButtf2.disabled = false
+  nextButtf2.style.opacity = 1
+  addtwo = 1
+
+    flagDiv41.style.backgroundColor = '#F9A826'
+    flagDiv41.style.color = 'white'
+    flagDiv41.style.border = 'none'
+  
+    flagDiv21.style.backgroundColor = 'white'
+    flagDiv21.style.color = '#5256A1'
+    flagDiv21.style.border = '1px solid #5256A1'
+    
+    flagDiv31.style.backgroundColor = 'white'
+    flagDiv31.style.color = '#5256A1'
+    flagDiv31.style.border = '1px solid #5256A1'
+    
+    flagDiv11.style.backgroundColor = 'white'
+    flagDiv11.style.color = '#5256A1'
+    flagDiv11.style.border = '1px solid #5256A1'
+
+}
+
+nextButt3.disabled = true
+   
+if(nextButt3.disabled = true){
+  nextButt3.style.opacity = 0.7
+}
+nextButtf3.disabled = true       // to disable the next buttons
+   
+if(nextButtf3.disabled = true){    // to style the disabled next buttons
+  nextButtf3.style.opacity = 0.5
+}
 
 
-
-let callCount2 = 0
+//CHOICE CONFIGURATION FOR THE THIRD QUESTION
 function choice12(){
-  callCount2 += 1
-  correctCount = parseInt(correctCount) + 1
-  if(callCount > 1){
-    correctCount = correctCount - 1
-  }
-  console.log(correctCount)
+  addthree = 1
+nextButt3.disabled = false
+nextButt3.style.opacity = 1
 
-console.log('callTmes =' + callCount2)
 
   outerDiv12.style.backgroundColor = '#F9A826'
   outerDiv12.style.color = 'white'
@@ -1512,15 +707,35 @@ console.log('callTmes =' + callCount2)
   
   
 }
+function flagged12(){
+  addthree = 1
+nextButtf3.disabled = false
+nextButtf3.style.opacity = 1
+
+
+  flagDiv12.style.backgroundColor = '#F9A826'
+  flagDiv12.style.color = 'white'
+  flagDiv12.style.border = 'none'
+
+  flagDiv22.style.backgroundColor = 'white'
+  flagDiv22.style.color = '#5256A1'
+  flagDiv22.style.border = '1px solid #5256A1'
+  
+  flagDiv32.style.backgroundColor = 'white'
+  flagDiv32.style.color = '#5256A1'
+  flagDiv32.style.border = '1px solid #5256A1'
+  
+  flagDiv42.style.backgroundColor = 'white'
+  flagDiv42.style.color = '#5256A1'
+  flagDiv42.style.border = '1px solid #5256A1'
+
+}
 
 function choice22(){
-  // if(document.getElementById('name2').innerHTML === randomCountry[100].name){
-  //   correctCount.innerHTML  = parseInt(correctCount.innerHTML) + 1
-  // }else{
-  //   if(document.getElementById('name2').innerHTML !== randomCountry[100].name){
-  //     correctCount.innerHTML  = parseInt(correctCount.innerHTML) + 0
-  //   }
-  // }
+  addthree = 0
+  nextButt3.style.opacity = 1
+nextButt3.disabled = false
+
 
   outerDiv22.style.backgroundColor = '#F9A826'
   outerDiv22.style.color = 'white'
@@ -1558,15 +773,35 @@ function choice22(){
 
 
 }
+function flagged22(){
+  addthree = 0
+  nextButtf3.style.opacity = 1
+nextButtf3.disabled = false
+
+
+  flagDiv22.style.backgroundColor = '#F9A826'
+  flagDiv22.style.color = 'white'
+  flagDiv22.style.border = 'none'
+
+  flagDiv12.style.backgroundColor = 'white'
+  flagDiv12.style.color = '#5256A1'
+  flagDiv12.style.border = '1px solid #5256A1'
+  
+  flagDiv32.style.backgroundColor = 'white'
+  flagDiv32.style.color = '#5256A1'
+  flagDiv32.style.border = '1px solid #5256A1'
+  
+  flagDiv42.style.backgroundColor = 'white'
+  flagDiv42.style.color = '#5256A1'
+  flagDiv42.style.border = '1px solid #5256A1'
+
+}
 
 function choice32(){
-  // if(document.getElementById('name3').innerHTML === randomCountry[100].name){
-  //   correctCount.innerHTML  = parseInt(correctCount.innerHTML) + 1
-  // }else{
-  //   if(document.getElementById('name3').innerHTML !== randomCountry[100].name){
-  //     correctCount.innerHTML  = parseInt(correctCount.innerHTML) + 0
-  //   }
-  // }
+  addthree = 0
+  nextButt3.style.opacity = 1
+nextButt3.disabled = false
+
 
   outerDiv32.style.backgroundColor = '#F9A826'
   outerDiv32.style.color = 'white'
@@ -1584,32 +819,55 @@ function choice32(){
   outerDiv42.style.color = '#5256A1'
   outerDiv42.style.border = '1px solid #5256A1'
 
+  
 
-  //FOR FIRST RESULT CARD
-  outerDivr4.style.backgroundColor = '#60BF88' //green
-  outerDivr4.style.color = 'white'
-  outerDivr4.style.border = 'none'
+    //FOR THE THIRD RESULT CARD
+    outerDivr12.style.backgroundColor = '#60BF88' //green
+    outerDivr12.style.color = 'white'
+    outerDivr12.style.border = 'none'
+
+    outerDivr42.style.backgroundColor = '#EA8282' //red
+    outerDivr42.style.color = 'white'
+    outerDivr42.style.border = 'none'
+
+    outerDivr22.style.backgroundColor = 'white'
+    outerDivr22.style.color = '#5256A1'
+    outerDivr22.style.border = '1px solid #5256A1'
+
+    outerDivr32.style.backgroundColor = 'white'
+    outerDivr32.style.color = '#5256A1'
+    outerDivr32.style.border = '1px solid #5256A1'
+
+}
+function flagged32(){
+  addthree = 0
+  nextButtf3.style.opacity = 1
+  nextButtf3.disabled = false
+
+
+  flagDiv32.style.backgroundColor = '#F9A826'
+  flagDiv32.style.color = 'white'
+  flagDiv32.style.border = 'none'
+
+  flagDiv22.style.backgroundColor = 'white'
+  flagDiv22.style.color = '#5256A1'
+  flagDiv22.style.border = '1px solid #5256A1'
   
-  outerDivr3.style.backgroundColor = '#EA8282' //red
-  outerDivr3.style.color = 'white'
-  outerDivr3.style.border = 'none'
+  flagDiv12.style.backgroundColor = 'white'
+  flagDiv12.style.color = '#5256A1'
+  flagDiv12.style.border = '1px solid #5256A1'
   
-  outerDivr1.style.backgroundColor = 'white'
-  outerDivr1.style.color = '#5256A1'
-  outerDivr1.style.border = '1px solid #5256A1'
-  
-  outerDivr2.style.backgroundColor = 'white'
-  outerDivr2.style.color = '#5256A1'
-  outerDivr2.style.border = '1px solid #5256A1'
+  flagDiv42.style.backgroundColor = 'white'
+  flagDiv42.style.color = '#5256A1'
+  flagDiv42.style.border = '1px solid #5256A1'
 
 }
 
 function choice42(){
-  // if(document.getElementById('name4').innerHTML === randomCountry[100].name){
-  //   correctCount.innerHTML  = parseInt(correctCount.innerHTML) + 1
-  // }else if(document.getElementById('name4').innerHTML !== randomCountry[100].name){
-  //     correctCount.innerHTML  = parseInt(correctCount.innerHTML) + 0
-  //   }
+  addthree = 0
+  nextButt3.style.opacity = 1
+nextButt3.disabled = false
+
 
     outerDiv42.style.backgroundColor = '#F9A826'
     outerDiv42.style.color = 'white'
@@ -1648,17 +906,46 @@ function choice42(){
   
   
 }
+function flagged42(){
+  addthree = 0
+  nextButtf3.style.opacity = 1
+nextButtf3.disabled = false
 
 
+    flagDiv42.style.backgroundColor = '#F9A826'
+    flagDiv42.style.color = 'white'
+    flagDiv42.style.border = 'none'
+  
+    flagDiv12.style.backgroundColor = 'white'
+    flagDiv12.style.color = '#5256A1'
+    flagDiv12.style.border = '1px solid #5256A1'
+    
+    flagDiv32.style.backgroundColor = 'white'
+    flagDiv32.style.color = '#5256A1'
+    flagDiv32.style.border = '1px solid #5256A1'
+    
+    flagDiv22.style.backgroundColor = 'white'
+    flagDiv22.style.color = '#5256A1'
+    flagDiv22.style.border = '1px solid #5256A1'
 
+}
+
+nextButtlast.disabled = true 
+if(nextButtlast.disabled = true){
+  nextButtlast.style.opacity = 0.7
+}
+
+nextButtf4.disabled = true
+if(nextButtf4.disabled = true){
+  nextButtf4.style.opacity = 0.7
+}
+
+
+//CHOICE CONFIGURATION FOR THE FOURTH QUESTION
 function choice13(){
-  // if(document.getElementById('name1').innerHTML === randomCountry[150].name){
-  //   correctCount.innerHTML  = parseInt(correctCount.innerHTML) + 1
-  // }else{
-  //   if(document.getElementById('name1').innerHTML !== randomCountry[150].name){
-  //     correctCount.innerHTML  = parseInt(correctCount.innerHTML) + 0
-  //   }
-  // }
+  addfour = 0
+  nextButtlast.style.opacity = 1
+nextButtlast.disabled = false
 
 
 
@@ -1697,17 +984,36 @@ outerDivr43.style.color = '#5256A1'
 outerDivr43.style.border = '1px solid #5256A1'
 
 }
+function flagged13(){
+  addfour = 0
+  nextButtf4.style.opacity = 1
+nextButtf4.disabled = false
 
-let callCount3 = 0
+
+
+  flagDiv13.style.backgroundColor = '#F9A826'
+  flagDiv13.style.color = 'white'
+  flagDiv13.style.border = 'none'
+
+  flagDiv23.style.backgroundColor = 'white'
+  flagDiv23.style.color = '#5256A1'
+  flagDiv23.style.border = '1px solid #5256A1'
+  
+  flagDiv33.style.backgroundColor = 'white'
+  flagDiv33.style.color = '#5256A1'
+  flagDiv33.style.border = '1px solid #5256A1'
+  
+  flagDiv43.style.backgroundColor = 'white'
+  flagDiv43.style.color = '#5256A1'
+  flagDiv43.style.border = '1px solid #5256A1'
+
+}
+
 function choice23(){
-  callCount3 += 1
-  correctCount = parseInt(correctCount) + 1
-  if(callCount > 1){
-    correctCount = correctCount - 1
-  }
-  console.log(correctCount)
+  addfour = 1
+  nextButtlast.style.opacity = 1
+nextButtlast.disabled = false
 
-console.log('callTmes =' + callCount3)
 
   outerDiv23.style.backgroundColor = '#F9A826'
   outerDiv23.style.color = 'white'
@@ -1744,15 +1050,35 @@ outerDivr43.style.color = '#5256A1'
 outerDivr43.style.border = '1px solid #5256A1'
 
 }
+function flagged23(){
+  addfour = 0
+  nextButtf4.style.opacity = 1
+nextButtf4.disabled = false
+
+
+  flagDiv23.style.backgroundColor = '#F9A826'
+  flagDiv23.style.color = 'white'
+  flagDiv23.style.border = 'none'
+
+  flagDiv13.style.backgroundColor = 'white'
+  flagDiv13.style.color = '#5256A1'
+  flagDiv13.style.border = '1px solid #5256A1'
+  
+  flagDiv33.style.backgroundColor = 'white'
+  flagDiv33.style.color = '#5256A1'
+  flagDiv33.style.border = '1px solid #5256A1'
+  
+  flagDiv43.style.backgroundColor = 'white'
+  flagDiv43.style.color = '#5256A1'
+  flagDiv43.style.border = '1px solid #5256A1'
+
+}
 
 function choice33(){
-  // if(document.getElementById('name3').innerHTML === randomCountry[150].name){
-  //   correctCount.innerHTML  = parseInt(correctCount.innerHTML) + 1
-  // }else{
-  //   if(document.getElementById('name3').innerHTML !== randomCountry[150].name){
-  //     correctCount.innerHTML  = parseInt(correctCount.innerHTML) + 0
-  //   }
-  // }
+  addfour = 0
+  nextButtlast.style.opacity = 1
+nextButtlast.disabled = false
+
 
   outerDiv33.style.backgroundColor = '#F9A826'
   outerDiv33.style.color = 'white'
@@ -1788,13 +1114,35 @@ function choice33(){
   outerDivr43.style.color = '#5256A1'
   outerDivr43.style.border = '1px solid #5256A1'
 }
+function flagged33(){
+  addfour = 1
+  nextButtf4.style.opacity = 1
+nextButtf4.disabled = false
+
+
+  flagDiv33.style.backgroundColor = '#F9A826'
+  flagDiv33.style.color = 'white'
+  flagDiv33.style.border = 'none'
+
+  flagDiv23.style.backgroundColor = 'white'
+  flagDiv23.style.color = '#5256A1'
+  flagDiv23.style.border = '1px solid #5256A1'
+  
+  flagDiv13.style.backgroundColor = 'white'
+  flagDiv13.style.color = '#5256A1'
+  flagDiv13.style.border = '1px solid #5256A1'
+  
+  flagDiv43.style.backgroundColor = 'white'
+  flagDiv43.style.color = '#5256A1'
+  flagDiv43.style.border = '1px solid #5256A1'
+
+}
 
 function choice43(){
-  // if(document.getElementById('name4').innerHTML === randomCountry[150].name){
-  //   correctCount.innerHTML  = parseInt(correctCount.innerHTML) + 1
-  // }else if(document.getElementById('name4').innerHTML !== randomCountry[150].name){
-  //     correctCount.innerHTML  = parseInt(correctCount.innerHTML) + 0
-  //   }
+  addfour = 0
+  nextButtlast.style.opacity = 1
+nextButtlast.disabled = false
+
 
     outerDiv43.style.backgroundColor = '#F9A826'
     outerDiv43.style.color = 'white'
@@ -1829,72 +1177,318 @@ function choice43(){
       outerDivr43.style.color = 'white'
       outerDivr43.style.border = 'none'
 }
+function flagged43(){
+  addfour = 0
+  nextButtf4.style.opacity = 1
+  nextButtf4.disabled = false
 
 
-if(clickCount===0){
-  prevButt.style.display = 'none'
+    flagDiv43.style.backgroundColor = '#F9A826'
+    flagDiv43.style.color = 'white'
+    flagDiv43.style.border = 'none'
+  
+    flagDiv13.style.backgroundColor = 'white'
+    flagDiv13.style.color = '#5256A1'
+    flagDiv13.style.border = '1px solid #5256A1'
+    
+    flagDiv33.style.backgroundColor = 'white'
+    flagDiv33.style.color = '#5256A1'
+    flagDiv33.style.border = '1px solid #5256A1'
+    
+    flagDiv23.style.backgroundColor = 'white'
+    flagDiv23.style.color = '#5256A1'
+    flagDiv23.style.border = '1px solid #5256A1'
+
+}
+
+
+function cquests(){
+    quizType.style.display = 'none'
+    quizCard.style.display = 'block'
+    submitButt.style.display = 'none'
+
+    var xhttp = new XMLHttpRequest()
+    xhttp.onreadystatechange = function(){
+      if(this.readyState === 4 && this.status === 200){
+        var countCap = JSON.parse(this.responseText)
+        const randomCountry = countCap
+  
+        document.getElementById('countryName').innerHTML = countCap[10].capital
+        document.getElementById('name1').innerHTML = randomCountry[153].name
+        document.getElementById('name2').innerHTML = randomCountry[171].name.split(' ', 1)
+        if(document.getElementById('name2').innerHTML.endsWith(',') || document.getElementById('name2').innerHTML.endsWith('(')){
+          document.getElementById('name2').innerHTML = document.getElementById('name2').innerHTML.slice(0, document.getElementById('name2').innerHTML.length-1)
+        }
+        document.getElementById('name3').innerHTML = randomCountry[135].name
+        document.getElementById('name4').innerHTML = randomCountry[10].name
+        
+        document.getElementById('countryNamer').innerHTML = countCap[10].capital
+        document.getElementById('namer1').innerHTML = randomCountry[153].name
+        document.getElementById('namer2').innerHTML = randomCountry[171].name.split(' ', 1)
+        if(document.getElementById('namer2').innerHTML.endsWith(',') || document.getElementById('name2').innerHTML.endsWith('(')){
+          document.getElementById('namer2').innerHTML = document.getElementById('name2').innerHTML.slice(0, document.getElementById('name2').innerHTML.length-1)
+        }
+        document.getElementById('namer3').innerHTML = randomCountry[135].name
+        document.getElementById('namer4').innerHTML = randomCountry[10].name
+  
+      }
+    }
+    xhttp.open('GET', 'https://restcountries.eu/rest/v2/all?fields=name;capital;flag', true)
+    xhttp.send()
+
+}
+
+function fquests(){
+    quizType.style.display = 'none'
+    flagCard.style.display = 'block'
+
+    var xhttp = new XMLHttpRequest()
+    xhttp.onreadystatechange = function(){
+      if(this.readyState === 4 && this.status === 200){
+        var countCap = JSON.parse(this.responseText)
+        const randomCountry = countCap
+  
+  
+        document.getElementById('flagImage1').src = randomCountry[230].flag
+
+        document.getElementById('namef1').innerHTML = randomCountry[30].name
+        document.getElementById('namef2').innerHTML = randomCountry[230].name
+        document.getElementById('namef3').innerHTML = randomCountry[180].name
+        document.getElementById('namef4').innerHTML = randomCountry[160].name
+      }
+    }
+    xhttp.open('GET', 'https://restcountries.eu/rest/v2/all?fields=name;capital;flag', true)
+    xhttp.send()
+
+}
+
+function resultShow(){
+  doneCard.style.display = 'none'
+  resultCard.style.display = 'block'
+  clickCount = 0
+}
+
+function tryAgain(){
+    window.location.reload()
+}
+
+
+function nextBut(){
+  clickCount++            //increases the count of clickcount via iteration
+  
+  var xhttp = new XMLHttpRequest()
+  xhttp.onreadystatechange = function(){
+    if(this.readyState === 4 && this.status === 200){
+      var countCap = JSON.parse(this.responseText)
+      const randomCountry = countCap
+
+      if(clickCount===1){    
+
+        quizCard.style.display = 'none'
+        quizCard1.style.display = 'block'
+        quizCard2.style.display = 'none'
+        quizCard3.style.display = 'none'
+        
+        document.getElementById('countryName1').innerHTML = countCap[50].capital
+        document.getElementById('name11').innerHTML = randomCountry[201].name
+        document.getElementById('name21').innerHTML = randomCountry[21].name
+        document.getElementById('name31').innerHTML = randomCountry[50].name
+        document.getElementById('name41').innerHTML = randomCountry[95].name
+        
+      }
+  
+      if(clickCount===2){
+        quizCard.style.display = 'none'
+        quizCard1.style.display = 'none'
+        quizCard2.style.display = 'block'
+        quizCard3.style.display = 'none'
+  
+      document.getElementById('countryName2').innerHTML = countCap[100].capital
+      document.getElementById('name12').innerHTML = randomCountry[100].name
+      document.getElementById('name22').innerHTML = randomCountry[22].name
+      document.getElementById('name32').innerHTML = randomCountry[39].name
+      document.getElementById('name42').innerHTML = randomCountry[121].name
+      }
+  
+      if(clickCount===3){
+        quizCard.style.display = 'none'
+        quizCard1.style.display = 'none'
+        quizCard2.style.display = 'none'
+        quizCard3.style.display = 'block'
+  
+        nextButtlast.innerHTML = 'Submit'
+          submitButt.style.display = 'block'
+          
+          
+          document.getElementById('countryName3').innerHTML = countCap[150].capital
+          document.getElementById('name13').innerHTML = randomCountry[15].name
+          document.getElementById('name23').innerHTML = randomCountry[150].name
+          document.getElementById('name33').innerHTML = randomCountry[230].name
+          document.getElementById('name43').innerHTML = randomCountry[220].name
+      } 
+    }
+  }
+  xhttp.open('GET', 'https://restcountries.eu/rest/v2/all?fields=name;capital;flag', true)
+  xhttp.send()
+
+
+  if(clickCount===4){
+      quizCard3.style.display = 'none'
+      flagCard.style.display = 'none'
+      doneCard.style.display = 'block'
+      correctCount.innerHTML = addone + addtwo + addthree + addfour // Displays the quiz score
+  }
+
+}
+
+function nextButf(){
+  clickCount++            //increases the count of clickcount via iteration
+
+  var xhttp = new XMLHttpRequest()
+  xhttp.onreadystatechange = function(){
+    if(this.readyState === 4 && this.status === 200){
+      var countCap = JSON.parse(this.responseText)
+      const randomCountry = countCap
+
+      if(clickCount===1){    
+
+        flagCard.style.display = 'none'
+        flagCard1.style.display = 'block'
+        flagCard2.style.display = 'none'
+        flagCard3.style.display = 'none'
+        
+        document.getElementById('flagImage2').src = randomCountry[211].flag
+
+        document.getElementById('namef11').innerHTML = randomCountry[111].name
+        document.getElementById('namef21').innerHTML = randomCountry[124].name
+        document.getElementById('namef31').innerHTML = randomCountry[78].name
+        document.getElementById('namef41').innerHTML = randomCountry[211].name
+        
+      }
+  
+      if(clickCount===2){
+        flagCard.style.display = 'none'
+        flagCard1.style.display = 'none'
+        flagCard2.style.display = 'block'
+        flagCard3.style.display = 'none'
+  
+        
+        document.getElementById('flagImage3').src = randomCountry[103].flag
+
+        document.getElementById('namef12').innerHTML = randomCountry[103].name
+        document.getElementById('namef22').innerHTML = randomCountry[5].name
+        document.getElementById('namef32').innerHTML = randomCountry[96].name
+        document.getElementById('namef42').innerHTML = randomCountry[199].name
+      }
+  
+      if(clickCount===3){
+        flagCard.style.display = 'none'
+        flagCard1.style.display = 'none'
+        flagCard2.style.display = 'none'
+        flagCard3.style.display = 'block'
+  
+        nextButtf4.innerHTML = 'Submit'
+          
+          
+        
+        document.getElementById('flagImage4').src = randomCountry[159].flag
+
+        document.getElementById('namef13').innerHTML = randomCountry[167].name
+        document.getElementById('namef23').innerHTML = randomCountry[77].name
+        document.getElementById('namef33').innerHTML = randomCountry[159].name
+        document.getElementById('namef43').innerHTML = randomCountry[38].name
+      } 
+
+    }
+  }
+  xhttp.open('GET', 'https://restcountries.eu/rest/v2/all?fields=name;capital;flag', true)
+  xhttp.send()
+
+  if(clickCount===4){
+    flagCard3.style.display = 'none'
+    doneCardf.style.display = 'block'
+    correctCountf.innerHTML = addone + addtwo + addthree + addfour // Displays the quiz score
+}
+
 }
 
 function nextButr(){
   clickCount++ 
-
-  if(clickCount===1){
+            
   
-    prevButt.style.display = 'block'
-    resultCard.style.display = 'none'
-    resultCard1.style.display = 'block'
-    resultCard2.style.display = 'none'
-    resultCard3.style.display = 'none'
-    
-    document.getElementById('countryNamer1').innerHTML = JSON.parse(countCap)[50].capital
-    document.getElementById('namer11').innerHTML = randomCountry[201].name
-    document.getElementById('namer21').innerHTML = randomCountry[21].name
-    document.getElementById('namer31').innerHTML = randomCountry[50].name
-    document.getElementById('namer41').innerHTML = randomCountry[95].name
-    
-  }
+  var xhttp = new XMLHttpRequest()
+  xhttp.onreadystatechange = function(){
+    if(this.readyState === 4 && this.status === 200){
+      var countCap = JSON.parse(this.responseText)
+      const randomCountry = countCap
 
-  if(clickCount===2){
+      if(clickCount===1){     //DO THINGS WHEN NEXT BUTTON IS CLICKED ONCE
   
-    prevButt.style.display = 'block'
-    resultCard.style.display = 'none'
-    resultCard1.style.display = 'none'
-    resultCard2.style.display = 'block'
-    resultCard3.style.display = 'none'
+        prevButt.style.display = 'block'
+        resultCard.style.display = 'none'
+        resultCard1.style.display = 'block'
+        resultCard2.style.display = 'none'
+        resultCard3.style.display = 'none'
+        
+        document.getElementById('countryNamer1').innerHTML = countCap[50].capital
+        document.getElementById('namer11').innerHTML = randomCountry[201].name
+        document.getElementById('namer21').innerHTML = randomCountry[21].name
+        document.getElementById('namer31').innerHTML = randomCountry[50].name
+        document.getElementById('namer41').innerHTML = randomCountry[95].name
+        
+      }
     
-  document.getElementById('countryNamer2').innerHTML = JSON.parse(countCap)[100].capital
-  document.getElementById('namer12').innerHTML = randomCountry[100].name
-  document.getElementById('namer22').innerHTML = randomCountry[22].name
-  document.getElementById('namer32').innerHTML = randomCountry[39].name
-  document.getElementById('namer42').innerHTML = randomCountry[121].name
-
-  }
-
-  if(clickCount===3){
-  
-    nextButtr0.style.display = 'none'
-      prevButt.style.display = 'block'
-
-      resultCard.style.display = 'none'
-      resultCard1.style.display = 'none'
-      resultCard2.style.display = 'none'
-      resultCard3.style.display = 'block'
+      if(clickCount===2){
       
-      document.getElementById('countryNamer3').innerHTML = JSON.parse(countCap)[150].capital
-      document.getElementById('namer13').innerHTML = randomCountry[15].name
-      document.getElementById('namer23').innerHTML = randomCountry[150].name
-      document.getElementById('namer33').innerHTML = randomCountry[230].name
-      document.getElementById('namer43').innerHTML = randomCountry[220].name
+        prevButt.style.display = 'block'
+        resultCard.style.display = 'none'
+        resultCard1.style.display = 'none'
+        resultCard2.style.display = 'block'
+        resultCard3.style.display = 'none'
+        
+      document.getElementById('countryNamer2').innerHTML = countCap[100].capital
+      document.getElementById('namer12').innerHTML = randomCountry[100].name
+      document.getElementById('namer22').innerHTML = randomCountry[22].name
+      document.getElementById('namer32').innerHTML = randomCountry[39].name
+      document.getElementById('namer42').innerHTML = randomCountry[121].name
+    
+      }
+    
+      if(clickCount===3){
       
+        nextButtr0.innerHTML = 'Home'
+        nextButtr0.addEventListener('click', function(){
+          window.location.reload()
+        })
+          prevButt.style.display = 'block'
+    
+          resultCard.style.display = 'none'
+          resultCard1.style.display = 'none'
+          resultCard2.style.display = 'none'
+          resultCard3.style.display = 'block'
+          
+          document.getElementById('countryNamer3').innerHTML = countCap[150].capital
+          document.getElementById('namer13').innerHTML = randomCountry[15].name
+          document.getElementById('namer23').innerHTML = randomCountry[150].name
+          document.getElementById('namer33').innerHTML = randomCountry[230].name
+          document.getElementById('namer43').innerHTML = randomCountry[220].name
+          
+      }
+    }
   }
-
+  xhttp.open('GET', 'https://restcountries.eu/rest/v2/all?fields=name;capital;flag', true)
+  xhttp.send()
   
 }
        
 function prevButr(){
   clickCount--
-
-  
+  function countries(){
+    var http = new XMLHttpRequest()
+    http.onreadystatechange = function(){
+        if(this.readyState === 4){
+          if(this.status === 200){
+            
   if(clickCount===0){
     prevButt.style.display = 'none'
     nextButtr.style.display = 'block'
@@ -1945,97 +1539,16 @@ function prevButr(){
 
   }
   
-}
-
-function nextBut(){
-  clickCount++            //increases the count of clickcount via iteration
-   
-
-  if(clickCount===1){
-    quizCard.style.display = 'none'
-    quizCard1.style.display = 'block'
-    quizCard2.style.display = 'none'
-    quizCard3.style.display = 'none'
-    
-    document.getElementById('countryName1').innerHTML = JSON.parse(countCap)[50].capital
-    document.getElementById('name11').innerHTML = randomCountry[201].name
-    document.getElementById('name21').innerHTML = randomCountry[21].name
-    document.getElementById('name31').innerHTML = randomCountry[50].name
-    document.getElementById('name41').innerHTML = randomCountry[95].name
-    
+          }
+        }
+    }
+    http.open('GET', 'https://restcountries.eu/rest/v2/all?fields=name;capital', true)
+    http.send()
   }
-
-  if(clickCount===2){
-    quizCard.style.display = 'none'
-    quizCard1.style.display = 'none'
-    quizCard2.style.display = 'block'
-    quizCard3.style.display = 'none'
-
-  document.getElementById('countryName2').innerHTML = JSON.parse(countCap)[100].capital
-  document.getElementById('name12').innerHTML = randomCountry[100].name
-  document.getElementById('name22').innerHTML = randomCountry[22].name
-  document.getElementById('name32').innerHTML = randomCountry[39].name
-  document.getElementById('name42').innerHTML = randomCountry[121].name
-  }
-
-  if(clickCount===3){
-    quizCard.style.display = 'none'
-    quizCard1.style.display = 'none'
-    quizCard2.style.display = 'none'
-    quizCard3.style.display = 'block'
-
-    nextButtlast.innerHTML = 'Submit'
-      nextButtf.style.display = 'none'
-      submitButt.style.display = 'block'
-      submitButtf.style.display = 'block'
-      
-      
-      document.getElementById('countryName3').innerHTML = JSON.parse(countCap)[150].capital
-      document.getElementById('name13').innerHTML = randomCountry[15].name
-      document.getElementById('name23').innerHTML = randomCountry[150].name
-      document.getElementById('name33').innerHTML = randomCountry[230].name
-      document.getElementById('name43').innerHTML = randomCountry[220].name
-  }
-
-  if(clickCount===4){
-      quizCard3.style.display = 'none'
-      flagCard.style.display = 'none'
-      doneCard.style.display = 'block'
-  }
-
+  
+  countries()
+  
+  
 }
 
-function cquests(){
-    quizType.style.display = 'none'
-    quizCard.style.display = 'block'
-    submitButt.style.display = 'none'
-}
 
-function fquests(){
-    quizType.style.display = 'none'
-    flagCard.style.display = 'block'
-    submitButtf.style.display = 'none'
-}
-
-function resultShow(){
-  doneCard.style.display = 'none'
-  resultCard.style.display = 'block'
-  clickCount = 0
-}
-
-function tryAgain(){
-    window.location.reload()
-}
-
-// function countries(){
-//     var http = new XMLHttpRequest()
-//     http.onreadystatechange = function(){
-//         if(this.readyState === 4){
-//             console.log(this.responseText)
-//         }
-//     }
-//     http.open('GET', 'https://restcountries.eu/rest/v2/all?fields=name;capital', true)
-//     http.send()
-// }
-
-// countries()

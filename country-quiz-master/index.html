@@ -30,7 +30,7 @@
                     <div class="parentDiv" onclick="choice3()">C <div id="name3">Sweden</div> </div>
                     <div class="parentDiv" onclick="choice4()">D <div id="name4">Austria</div> </div>
                 </div>
-                <button onclick="nextBut()" id="nextButt">Next</button>
+                <button onclick="nextBut()" id="nextButt1">Next</button>
                 <button onclick="nextBut()" id="submitButt">Submit</button>
             </div>
         </div>
@@ -46,7 +46,7 @@
                     <div class="parentDiv" onclick="choice31()">C <div id="name31">Sweden</div> </div>
                     <div class="parentDiv" onclick="choice41()">D <div id="name41">Austria</div> </div>
                 </div>
-                <button onclick="nextBut()" id="nextButt">Next</button>
+                <button onclick="nextBut()" id="nextButt2">Next</button>
                 <button onclick="nextBut()" id="submitButt">Submit</button>
             </div>
         </div>
@@ -62,7 +62,7 @@
                     <div class="parentDiv" onclick="choice32()">C <div id="name32">Sweden</div> </div>
                     <div class="parentDiv" onclick="choice42()">D <div id="name42">Austria</div> </div>
                 </div>
-                <button onclick="nextBut()" id="nextButt">Next</button>
+                <button onclick="nextBut()" id="nextButt3">Next</button>
                 <button onclick="nextBut()" id="submitButt">Submit</button>
             </div>
         </div>
@@ -80,16 +80,6 @@
                 </div>
                 <button onclick="nextBut()" id="nextButtlast">Next</button>
                 <button onclick="nextBut()" id="submitButt">Submit</button>
-            </div>
-        </div>
-    
-        <div id="doneCard">
-            <h2>COUNTRY QUIZ</h2>
-            <div id="doneWrap">
-                <img src="winner.svg" alt="">
-                <h1 onclick="resultShow()">Results</h1>
-                <p>You got <span id="correctCount">0</span> correct answers</p>
-                <button onclick="tryAgain()">Try again</button>
             </div>
         </div>
 
@@ -158,23 +148,108 @@
         </div>
     
         <div id="flagCard">
-            <h2>COUNTRY QUIZ</h2>
-            <img src="adventure.svg" alt="">
-            <div id="questionWrap">
-                <div id="flag">
-                    
+            <h2 id="flagCardH2">COUNTRY QUIZ</h2>
+            <img src="adventure.svg" alt="" id="adventure">
+            <div id="questionWrapf">
+
+                <div id="flags">
+                    <img src="https://restcountries.eu/data/afg.svg" alt="" class="flagImage" id="flagImage1">
                 </div>
-                <h4>Which country does this flag belong to?</h4>
+
+                <h4 id="flagCardH4">Which country does this flag belong to?</h4>
                 <div id="questionsf">
-                    <div>A <span>Vietnam</span> </div>
-                    <div>B <span>Malaysia</span> </div>
-                    <div>C <span>Sweden</span> </div>
-                    <div>D <span>Austria</span> </div>
+                    <div class="parentDivf" onclick="flagged1()">A <span id="namef1">Vietnam</span> </div>
+                    <div class="parentDivf" onclick="flagged2()">B <span id="namef2">Malaysia</span> </div>
+                    <div class="parentDivf" onclick="flagged3()">C <span id="namef3">Sweden</span> </div>
+                    <div class="parentDivf" onclick="flagged4()">D <span id="namef4">Austria</span> </div>
                 </div>
-                <button onclick="nextBut()" id="nextButtf">Next</button>
-                <button onclick="nextBut()" id="submitButtf">Submit</button>
+                <button onclick="nextButf()" id="nextButtf1">Next</button>
             </div>
         </div>
+    
+        <div id="flagCard1">
+            <h2 id="flagCardH2">COUNTRY QUIZ</h2>
+            <img src="adventure.svg" alt="" id="adventure">
+            <div id="questionWrapf">
+
+                <div id="flags">
+                    <img src="https://restcountries.eu/data/afg.svg" alt=""  class="flagImage" id="flagImage2">
+                </div>
+
+                <h4 id="flagCardH4">Which country does this flag belong to?</h4>
+                <div id="questionsf">
+                    <div class="parentDivf" onclick="flagged11()">A <span id="namef11">Vietnam</span> </div>
+                    <div class="parentDivf" onclick="flagged21()">B <span id="namef21">Malaysia</span> </div>
+                    <div class="parentDivf" onclick="flagged31()">C <span id="namef31">Sweden</span> </div>
+                    <div class="parentDivf" onclick="flagged41()">D <span id="namef41">Austria</span> </div>
+                </div>
+                <button onclick="nextButf()" id="nextButtf2">Next</button>
+            </div>
+        </div>
+    
+        <div id="flagCard2">
+            <h2 id="flagCardH2">COUNTRY QUIZ</h2>
+            <img src="adventure.svg" alt="" id="adventure">
+            <div id="questionWrapf">
+
+                <div id="flags">
+                    <img src="https://restcountries.eu/data/afg.svg" alt=""  class="flagImage" id="flagImage3">
+                </div>
+
+                <h4 id="flagCardH4">Which country does this flag belong to?</h4>
+                <div id="questionsf">
+                    <div class="parentDivf" onclick="flagged12()">A <span id="namef12">Vietnam</span> </div>
+                    <div class="parentDivf" onclick="flagged22()">B <span id="namef22">Malaysia</span> </div>
+                    <div class="parentDivf" onclick="flagged32()">C <span id="namef32">Sweden</span> </div>
+                    <div class="parentDivf" onclick="flagged42()">D <span id="namef42">Austria</span> </div>
+                </div>
+                <button onclick="nextButf()" id="nextButtf3">Next</button>
+            </div>
+        </div>
+    
+        <div id="flagCard3">
+            <h2 id="flagCardH2">COUNTRY QUIZ</h2>
+            <img src="adventure.svg" alt="" id="adventure">
+            <div id="questionWrapf">
+
+                <div id="flags">
+                    <img src="https://restcountries.eu/data/afg.svg" alt="" class="flagImage" id="flagImage4">
+                </div>
+
+                <h4 id="flagCardH4">Which country does this flag belong to?</h4>
+                <div id="questionsf">
+                    <div class="parentDivf" onclick="flagged13()">A <span id="namef13">Vietnam</span> </div>
+                    <div class="parentDivf" onclick="flagged23()">B <span id="namef23">Malaysia</span> </div>
+                    <div class="parentDivf" onclick="flagged33()">C <span id="namef33">Sweden</span> </div>
+                    <div class="parentDivf" onclick="flagged43()">D <span id="namef43">Austria</span> </div>
+                </div>
+                <button onclick="nextButf()" id="nextButtf4">Next</button>
+            </div>
+        </div>
+    
+    
+        <div id="doneCard">
+            <h2>COUNTRY QUIZ</h2>
+            <div id="doneWrap">
+                <img src="winner.svg" alt="">
+                <h1 onclick="resultShow()">Results</h1>
+                <p>You got <span id="correctCount">0</span> correct answers</p>
+                <button onclick="tryAgain()">Try again</button>
+            </div>
+        </div>
+
+        <div id="doneCardf">
+            <h2>COUNTRY QUIZ</h2>
+            <div id="doneWrapf">
+                <img src="winner.svg" alt="">
+                <h1 onclick="resultShowf()">Results</h1>
+                <p>You got <span id="correctCountf">0</span> correct answers</p>
+                <button onclick="tryAgain()">Try again</button>
+            </div>
+        </div>
+
+
+
 
     </main>
     

@@ -751,7 +751,7 @@ main{
 
 
 
-/* THE BY FLAG TYPE */
+/* THE BY FLAG TYPE 1*/
 
 #flagCard{
     color: #5256A1;
@@ -763,21 +763,21 @@ main{
     cursor: pointer;
 }
 
-#flagCard h2{
+#flagCardH2{
     margin: 0;
     color: white;
 }
 
-#flagCard img{
+#adventure{
     width: 100px;
     height: 100px;
     position: absolute;
     top: -20px;
     right: 0;
-    z-index: 10;
+    z-index: 50;
 }
 
-#questionWrap{
+#questionWrapf{
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -787,17 +787,22 @@ main{
     text-align: center;
 }
 
-#flag{
+#flags{
     width: 70px;
     height: 40px;
     box-shadow: 0 0 5px #5256A1;
     border: 1px solid white;
     border-radius: 3px;
-    margin: 18% 0 7% 20px;
+    margin: 10% 0 0 20px;
 }
 
-#flagCard h4{
-    margin: 5% 0 5% 20px;
+.flagImage{
+    width: 100%;
+    height: 100%;
+}
+
+#flagCardH4{
+    margin: 2% 0 5% 20px;
     width: 80%;
     text-align: left;
 }
@@ -811,27 +816,27 @@ main{
     list-style-type: none;
 }
 
-#questionsf div span{
+.parentDivf #namef1, .parentDivf #namef2, .parentDivf #namef3, .parentDivf #namef4{
     margin-left: 20px;
 }
 
-#questionsf div{
+.parentDivf{
     list-style-type: none;
     width: 80%;
-    padding: 5px 0 5px 15px;
+    padding: 9px 15px;
     text-align: left;
     border: 1px solid #5256A1;
     border-radius: 6px;
     margin: 0 auto 15px auto;
 }
 
-#questionsf div:hover{
+.parentDivf:hover{
     background-color: #F9A826;
     color: white;
     border:none ;
 }
 
-#questionWrap button{
+#questionWrapf button{
     position: absolute;
     right: 7%;
     padding: 8px 14px;
@@ -841,8 +846,307 @@ main{
     border:none ;
 }
 
-#questionWrap button:last-of-type{
+
+
+
+
+
+
+/* THE BY FLAG TYPE 2*/
+
+#flagCard1{
+    color: #5256A1;
+    font-family: sans-serif;
+    position: relative;
+    width: 300px;
+    height: 450px;
+    display: none;
+    cursor: pointer;
+}
+
+#flagCardH2{
+    margin: 0;
+    color: white;
+}
+
+#adventure{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -20px;
+    right: 0;
+    z-index: 50;
+}
+
+#questionWrapf{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 90%;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#flags{
+    width: 70px;
+    height: 40px;
+    box-shadow: 0 0 5px #5256A1;
+    border: 1px solid white;
+    border-radius: 3px;
+    margin: 10% 0 0 20px;
+}
+
+#flagImage{
+    width: 100%;
+    height: 100%;
+}
+
+#flagCardH4{
+    margin: 2% 0 5% 20px;
+    width: 80%;
+    text-align: left;
+}
+
+#questionsf{
+    height: auto;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+.parentDivf #namef11, .parentDivf #namef21, .parentDivf #namef31, .parentDivf #namef41{
+    margin-left: 20px;
+}
+
+.parentDivf{
+    list-style-type: none;
+    width: 80%;
+    padding: 9px 15px;
+    text-align: left;
+    border: 1px solid #5256A1;
+    border-radius: 6px;
+    margin: 0 auto 15px auto;
+}
+
+.parentDivf:hover{
+    background-color: #F9A826;
+    color: white;
+    border:none ;
+}
+
+#questionWrapf button{
+    position: absolute;
     right: 7%;
+    padding: 8px 14px;
+    border-radius: 4px;
+    background-color: #F9A826;
+    color: white;
+    border:none ;
+}
+
+
+
+
+
+
+
+/* THE BY FLAG TYPE 3*/
+
+#flagCard2{
+    color: #5256A1;
+    font-family: sans-serif;
+    position: relative;
+    width: 300px;
+    height: 450px;
+    display: none;
+    cursor: pointer;
+}
+
+#flagCardH2{
+    margin: 0;
+    color: white;
+}
+
+#adventure{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -20px;
+    right: 0;
+    z-index: 50;
+}
+
+#questionWrapf{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 90%;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#flags{
+    width: 70px;
+    height: 40px;
+    box-shadow: 0 0 5px #5256A1;
+    border: 1px solid white;
+    border-radius: 3px;
+    margin: 10% 0 0 20px;
+}
+
+#flagImage{
+    width: 100%;
+    height: 100%;
+}
+
+#flagCardH4{
+    margin: 2% 0 5% 20px;
+    width: 80%;
+    text-align: left;
+}
+
+#questionsf{
+    height: auto;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+.parentDivf #namef12, .parentDivf #namef22, .parentDivf #namef32, .parentDivf #namef42{
+    margin-left: 20px;
+}
+
+.parentDivf{
+    list-style-type: none;
+    width: 80%;
+    padding: 9px 15px;
+    text-align: left;
+    border: 1px solid #5256A1;
+    border-radius: 6px;
+    margin: 0 auto 15px auto;
+}
+
+.parentDivf:hover{
+    background-color: #F9A826;
+    color: white;
+    border:none ;
+}
+
+#questionWrapf button{
+    position: absolute;
+    right: 7%;
+    padding: 8px 14px;
+    border-radius: 4px;
+    background-color: #F9A826;
+    color: white;
+    border:none ;
+}
+
+
+
+
+
+
+
+/* THE BY FLAG TYPE 4*/
+
+#flagCard3{
+    color: #5256A1;
+    font-family: sans-serif;
+    position: relative;
+    width: 300px;
+    height: 450px;
+    display: none;
+    cursor: pointer;
+}
+
+#flagCardH2{
+    margin: 0;
+    color: white;
+}
+
+#adventure{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -20px;
+    right: 0;
+    z-index: 50;
+}
+
+#questionWrapf{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 90%;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#flags{
+    width: 70px;
+    height: 40px;
+    box-shadow: 0 0 5px #5256A1;
+    border: 1px solid white;
+    border-radius: 3px;
+    margin: 10% 0 0 20px;
+}
+
+#flagImage{
+    width: 100%;
+    height: 100%;
+}
+
+#flagCardH4{
+    margin: 2% 0 5% 20px;
+    width: 80%;
+    text-align: left;
+}
+
+#questionsf{
+    height: auto;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+.parentDivf #namef13, .parentDivf #namef23, .parentDivf #namef33, .parentDivf #namef43{
+    margin-left: 20px;
+}
+
+.parentDivf{
+    list-style-type: none;
+    width: 80%;
+    padding: 9px 15px;
+    text-align: left;
+    border: 1px solid #5256A1;
+    border-radius: 6px;
+    margin: 0 auto 15px auto;
+}
+
+.parentDivf:hover{
+    background-color: #F9A826;
+    color: white;
+    border:none ;
+}
+
+#questionWrapf button{
+    position: absolute;
+    right: 7%;
+    padding: 8px 14px;
+    border-radius: 4px;
+    background-color: #F9A826;
+    color: white;
+    border:none ;
 }
 
 
@@ -906,6 +1210,71 @@ main{
 }
 
 #doneWrap button:hover{
+    background-color: #5256A1;
+    color: white;
+    border: none;
+}
+
+
+/* REPORT CARD :) */
+
+#doneCardf{
+    color: #5256A1;
+    font-family: sans-serif;
+    width: 300px;
+    height: 320px;
+    display: none;
+    cursor: pointer;
+}
+
+#doneCardf h2{
+    margin: 0;  
+    color: white;
+}
+
+#doneWrapf{
+    width: 100%;
+    height: 85%;
+    border-radius: 10px;
+    position: relative;
+    background-color: white;
+    text-align: center;
+}
+
+#doneWrapf img{
+    width: 100px;
+    height: 100px;
+    z-index: 10;
+}
+
+#doneWrapf h1{
+    margin: 0 0 5px 0;
+}
+
+#doneWrapf p{
+    margin: 0;
+    font-size: 14px;
+}
+
+#doneWrapf p span{
+    font-size: 22px;
+    font-weight: bold;
+    color: lime;
+}
+
+#doneWrapf button{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparent;
+    color: #5256A1;
+    border: 1px solid #5256A1;
+    border-radius: 5px;
+    padding: 7px 25px;
+}
+
+#doneWrapf button:hover{
     background-color: #5256A1;
     color: white;
     border: none;
