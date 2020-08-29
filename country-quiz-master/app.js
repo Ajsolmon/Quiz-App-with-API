@@ -9,6 +9,10 @@
   const resultCard1 = document.getElementById('resultCard1')
   const resultCard2 = document.getElementById('resultCard2')
   const resultCard3 = document.getElementById('resultCard3')
+  const resultCardf1 = document.getElementById('resultCardf1')
+  const resultCardf2 = document.getElementById('resultCardf2')
+  const resultCardf3 = document.getElementById('resultCardf3')
+  const resultCardf4 = document.getElementById('resultCardf4')
   const doneCard = document.getElementById('doneCard')
   const doneCardf = document.getElementById('doneCardf')
   const nextButt1 = document.getElementById('nextButt1')
@@ -74,26 +78,51 @@
 
 
 
-const outerDivr1 = document.getElementById('namer1').parentElement
-const outerDivr2 = document.getElementById('namer2').parentElement
-const outerDivr3 = document.getElementById('namer3').parentElement
-const outerDivr4 = document.getElementById('namer4').parentElement
+  const outerDivr1 = document.getElementById('namer1').parentElement
+  const outerDivr2 = document.getElementById('namer2').parentElement
+  const outerDivr3 = document.getElementById('namer3').parentElement
+  const outerDivr4 = document.getElementById('namer4').parentElement
+  
+  const outerDivr11 = document.getElementById('namer11').parentElement
+  const outerDivr21 = document.getElementById('namer21').parentElement
+  const outerDivr31 = document.getElementById('namer31').parentElement
+  const outerDivr41 = document.getElementById('namer41').parentElement
+  
+  const outerDivr12 = document.getElementById('namer12').parentElement
+  const outerDivr22 = document.getElementById('namer22').parentElement
+  const outerDivr32 = document.getElementById('namer32').parentElement
+  const outerDivr42 = document.getElementById('namer42').parentElement
+  
+  const outerDivr13 = document.getElementById('namer13').parentElement
+  const outerDivr23 = document.getElementById('namer23').parentElement
+  const outerDivr33 = document.getElementById('namer33').parentElement
+  const outerDivr43 = document.getElementById('namer43').parentElement
+  
 
-const outerDivr11 = document.getElementById('namer11').parentElement
-const outerDivr21 = document.getElementById('namer21').parentElement
-const outerDivr31 = document.getElementById('namer31').parentElement
-const outerDivr41 = document.getElementById('namer41').parentElement
 
-const outerDivr12 = document.getElementById('namer12').parentElement
-const outerDivr22 = document.getElementById('namer22').parentElement
-const outerDivr32 = document.getElementById('namer32').parentElement
-const outerDivr42 = document.getElementById('namer42').parentElement
 
-const outerDivr13 = document.getElementById('namer13').parentElement
-const outerDivr23 = document.getElementById('namer23').parentElement
-const outerDivr33 = document.getElementById('namer33').parentElement
-const outerDivr43 = document.getElementById('namer43').parentElement
 
+  const outerDivfr1 = document.getElementById('namefr1').parentElement
+  const outerDivfr2 = document.getElementById('namefr2').parentElement
+  const outerDivfr3 = document.getElementById('namefr3').parentElement
+  const outerDivfr4 = document.getElementById('namefr4').parentElement
+  
+  const outerDivfr11 = document.getElementById('namefr11').parentElement
+  const outerDivfr21 = document.getElementById('namefr21').parentElement
+  const outerDivfr31 = document.getElementById('namefr31').parentElement
+  const outerDivfr41 = document.getElementById('namefr41').parentElement
+  
+  const outerDivfr12 = document.getElementById('namefr12').parentElement
+  const outerDivfr22 = document.getElementById('namefr22').parentElement
+  const outerDivfr32 = document.getElementById('namefr32').parentElement
+  const outerDivfr42 = document.getElementById('namefr42').parentElement
+  
+  const outerDivfr13 = document.getElementById('namefr13').parentElement
+  const outerDivfr23 = document.getElementById('namefr23').parentElement
+  const outerDivfr33 = document.getElementById('namefr33').parentElement
+  const outerDivfr43 = document.getElementById('namefr43').parentElement
+  
+    
 
 let correctCount = document.getElementById('correctCount')
 let correctCountf = document.getElementById('correctCountf')
@@ -176,6 +205,25 @@ function flagged1(){
   flagDiv4.style.backgroundColor = 'white'
   flagDiv4.style.color = '#5256A1'
   flagDiv4.style.border = '1px solid #5256A1'
+
+  
+
+  //FOR FIRST RESULT CARD
+  outerDivfr1.style.backgroundColor = '#EA8282' //red
+  outerDivfr1.style.color = 'white'
+  outerDivfr1.style.border = 'none'
+
+  outerDivfr3.style.backgroundColor = 'white'
+  outerDivfr3.style.color = '#5256A1'
+  outerDivfr3.style.border = '1px solid #5256A1'
+  
+  outerDivfr4.style.backgroundColor = 'white'
+  outerDivfr4.style.color = '#5256A1'
+  outerDivfr4.style.border = '1px solid #5256A1'
+
+  outerDivfr2.style.backgroundColor = '#60BF88' //green
+  outerDivfr2.style.color = 'white'
+  outerDivfr2.style.border = 'none'
 }
 
 function choice2(){
@@ -240,6 +288,24 @@ function flagged2(){
   flagDiv4.style.backgroundColor = 'white'
   flagDiv4.style.color = '#5256A1'
   flagDiv4.style.border = '1px solid #5256A1'
+  
+
+  //FOR FIRST RESULT CARD
+  outerDivfr1.style.backgroundColor = 'white'
+  outerDivfr1.style.color = '#5256A1'
+  outerDivfr1.style.border = '1px solid #5256A1'
+
+  outerDivfr3.style.backgroundColor = 'white'
+  outerDivfr3.style.color = '#5256A1'
+  outerDivfr3.style.border = '1px solid #5256A1'
+  
+  outerDivfr4.style.backgroundColor = 'white'
+  outerDivfr4.style.color = '#5256A1'
+  outerDivfr4.style.border = '1px solid #5256A1'
+
+  outerDivfr2.style.backgroundColor = '#60BF88' //green
+  outerDivfr2.style.color = 'white'
+  outerDivfr2.style.border = 'none'
 }
 
 function choice3(){
@@ -306,6 +372,24 @@ function flagged3(){
   flagDiv4.style.backgroundColor = 'white'
   flagDiv4.style.color = '#5256A1'
   flagDiv4.style.border = '1px solid #5256A1'
+  
+
+  //FOR FIRST RESULT CARD
+  outerDivfr3.style.backgroundColor = '#EA8282' //red
+  outerDivfr3.style.color = 'white'
+  outerDivfr3.style.border = 'none'
+
+  outerDivfr1.style.backgroundColor = 'white'
+  outerDivfr1.style.color = '#5256A1'
+  outerDivfr1.style.border = '1px solid #5256A1'
+  
+  outerDivfr4.style.backgroundColor = 'white'
+  outerDivfr4.style.color = '#5256A1'
+  outerDivfr4.style.border = '1px solid #5256A1'
+
+  outerDivfr2.style.backgroundColor = '#60BF88' //green
+  outerDivfr2.style.color = 'white'
+  outerDivfr2.style.border = 'none'
 }
 
 function choice4(){
@@ -372,6 +456,24 @@ function flagged4(){
   flagDiv1.style.backgroundColor = 'white'
   flagDiv1.style.color = '#5256A1'
   flagDiv1.style.border = '1px solid #5256A1'
+  
+
+  //FOR FIRST RESULT CARD
+  outerDivfr4.style.backgroundColor = '#EA8282' //red
+  outerDivfr4.style.color = 'white'
+  outerDivfr4.style.border = 'none'
+
+  outerDivfr3.style.backgroundColor = 'white'
+  outerDivfr3.style.color = '#5256A1'
+  outerDivfr3.style.border = '1px solid #5256A1'
+  
+  outerDivfr1.style.backgroundColor = 'white'
+  outerDivfr1.style.color = '#5256A1'
+  outerDivfr1.style.border = '1px solid #5256A1'
+
+  outerDivfr2.style.backgroundColor = '#60BF88' //green
+  outerDivfr2.style.color = 'white'
+  outerDivfr2.style.border = 'none'
 }
 
 nextButt2.disabled = true
@@ -451,6 +553,22 @@ function flagged11(){
   flagDiv41.style.color = '#5256A1'
   flagDiv41.style.border = '1px solid #5256A1'
 
+  //FOR SECOND RESULT CARD
+  outerDivfr11.style.backgroundColor = '#EA8282'  //red
+  outerDivfr11.style.color = 'white'
+  outerDivfr11.style.border = 'none'
+  
+  outerDivfr31.style.backgroundColor = 'white'
+  outerDivfr31.style.color = '#5256A1'
+  outerDivfr31.style.border = '1px solid #5256A1'
+
+  outerDivfr41.style.backgroundColor = '#60BF88' //green
+  outerDivfr41.style.color = 'white'
+  outerDivfr41.style.border = 'none'
+
+  outerDivfr21.style.backgroundColor = 'white'
+  outerDivfr21.style.color = '#5256A1'
+  outerDivfr21.style.border = '1px solid #5256A1'
 }
 
 function choice21(){
@@ -517,6 +635,23 @@ function flagged21(){
   flagDiv41.style.color = '#5256A1'
   flagDiv41.style.border = '1px solid #5256A1'
 
+
+  //FOR SECOND RESULT CARD
+  outerDivfr21.style.backgroundColor = '#EA8282'  //red
+  outerDivfr21.style.color = 'white'
+  outerDivfr21.style.border = 'none'
+  
+  outerDivfr31.style.backgroundColor = 'white'
+  outerDivfr31.style.color = '#5256A1'
+  outerDivfr31.style.border = '1px solid #5256A1'
+
+  outerDivfr41.style.backgroundColor = '#60BF88' //green
+  outerDivfr41.style.color = 'white'
+  outerDivfr41.style.border = 'none'
+
+  outerDivfr11.style.backgroundColor = 'white'
+  outerDivfr11.style.color = '#5256A1'
+  outerDivfr11.style.border = '1px solid #5256A1'
 }
 
 function choice31(){
@@ -584,6 +719,23 @@ function flagged31(){
   flagDiv41.style.color = '#5256A1'
   flagDiv41.style.border = '1px solid #5256A1'
 
+
+  //FOR SECOND RESULT CARD
+  outerDivfr31.style.backgroundColor = '#EA8282'  //red
+  outerDivfr31.style.color = 'white'
+  outerDivfr31.style.border = 'none'
+  
+  outerDivfr21.style.backgroundColor = 'white'
+  outerDivfr21.style.color = '#5256A1'
+  outerDivfr21.style.border = '1px solid #5256A1'
+
+  outerDivfr41.style.backgroundColor = '#60BF88' //green
+  outerDivfr41.style.color = 'white'
+  outerDivfr41.style.border = 'none'
+
+  outerDivfr11.style.backgroundColor = 'white'
+  outerDivfr11.style.color = '#5256A1'
+  outerDivfr11.style.border = '1px solid #5256A1'
 }
 
 function choice41(){
@@ -649,6 +801,23 @@ function flagged41(){
     flagDiv11.style.color = '#5256A1'
     flagDiv11.style.border = '1px solid #5256A1'
 
+
+  //FOR SECOND RESULT CARD
+  outerDivfr31.style.backgroundColor = 'white'
+  outerDivfr31.style.color = '#5256A1'
+  outerDivfr31.style.border = '1px solid #5256A1'
+  
+  outerDivfr21.style.backgroundColor = 'white'
+  outerDivfr21.style.color = '#5256A1'
+  outerDivfr21.style.border = '1px solid #5256A1'
+
+  outerDivfr41.style.backgroundColor = '#60BF88' //green
+  outerDivfr41.style.color = 'white'
+  outerDivfr41.style.border = 'none'
+
+  outerDivfr11.style.backgroundColor = 'white'
+  outerDivfr11.style.color = '#5256A1'
+  outerDivfr11.style.border = '1px solid #5256A1'
 }
 
 nextButt3.disabled = true
@@ -729,6 +898,23 @@ nextButtf3.style.opacity = 1
   flagDiv42.style.color = '#5256A1'
   flagDiv42.style.border = '1px solid #5256A1'
 
+
+  //FOR THE THIRD RESULT CARD
+  outerDivfr12.style.backgroundColor = '#60BF88' //green
+  outerDivfr12.style.color = 'white'
+  outerDivfr12.style.border = 'none'
+
+  outerDivfr22.style.backgroundColor = 'white'
+  outerDivfr22.style.color = '#5256A1'
+  outerDivfr22.style.border = '1px solid #5256A1'
+
+  outerDivfr32.style.backgroundColor = 'white'
+  outerDivfr32.style.color = '#5256A1'
+  outerDivfr32.style.border = '1px solid #5256A1'
+
+  outerDivfr42.style.backgroundColor = 'white'
+  outerDivfr42.style.color = '#5256A1'
+  outerDivfr42.style.border = '1px solid #5256A1'
 }
 
 function choice22(){
@@ -755,7 +941,7 @@ nextButt3.disabled = false
 
 
   //FOR THE THIRD RESULT CARD
-    outerDivr12.style.backgroundColor = '#60BF88' //green
+    outerDivfr12.style.backgroundColor = '#60BF88' //green
     outerDivr12.style.color = 'white'
     outerDivr12.style.border = 'none'
 
@@ -794,6 +980,24 @@ nextButtf3.disabled = false
   flagDiv42.style.backgroundColor = 'white'
   flagDiv42.style.color = '#5256A1'
   flagDiv42.style.border = '1px solid #5256A1'
+  
+
+  //FOR THE THIRD RESULT CARD
+  outerDivfr12.style.backgroundColor = '#60BF88' //green
+  outerDivfr12.style.color = 'white'
+  outerDivfr12.style.border = 'none'
+
+  outerDivfr22.style.backgroundColor = '#EA8282' //red
+  outerDivfr22.style.color = 'white'
+  outerDivfr22.style.border = 'none'
+
+  outerDivfr32.style.backgroundColor = 'white'
+  outerDivfr32.style.color = '#5256A1'
+  outerDivfr32.style.border = '1px solid #5256A1'
+
+  outerDivfr42.style.backgroundColor = 'white'
+  outerDivfr42.style.color = '#5256A1'
+  outerDivfr42.style.border = '1px solid #5256A1'
 
 }
 
@@ -860,6 +1064,23 @@ function flagged32(){
   flagDiv42.style.backgroundColor = 'white'
   flagDiv42.style.color = '#5256A1'
   flagDiv42.style.border = '1px solid #5256A1'
+
+  //FOR THE THIRD RESULT CARD
+  outerDivfr12.style.backgroundColor = '#60BF88' //green
+  outerDivfr12.style.color = 'white'
+  outerDivfr12.style.border = 'none'
+
+  outerDivfr32.style.backgroundColor = '#EA8282' //red
+  outerDivfr32.style.color = 'white'
+  outerDivfr32.style.border = 'none'
+  
+  outerDivfr22.style.backgroundColor = 'white'
+  outerDivfr22.style.color = '#5256A1'
+  outerDivfr22.style.border = '1px solid #5256A1'
+
+  outerDivfr42.style.backgroundColor = 'white'
+  outerDivfr42.style.color = '#5256A1'
+  outerDivfr42.style.border = '1px solid #5256A1'
 
 }
 
@@ -928,6 +1149,23 @@ nextButtf3.disabled = false
     flagDiv22.style.color = '#5256A1'
     flagDiv22.style.border = '1px solid #5256A1'
 
+
+  //FOR THE THIRD RESULT CARD
+  outerDivfr12.style.backgroundColor = '#60BF88' //green
+  outerDivfr12.style.color = 'white'
+  outerDivfr12.style.border = 'none'
+
+  outerDivfr42.style.backgroundColor = '#EA8282' //red
+  outerDivfr42.style.color = 'white'
+  outerDivfr42.style.border = 'none'
+
+  outerDivfr32.style.backgroundColor = 'white'
+  outerDivfr32.style.color = '#5256A1'
+  outerDivfr32.style.border = '1px solid #5256A1'
+  
+  outerDivfr22.style.backgroundColor = 'white'
+  outerDivfr22.style.color = '#5256A1'
+  outerDivfr22.style.border = '1px solid #5256A1'
 }
 
 nextButtlast.disabled = true 
@@ -1007,6 +1245,23 @@ nextButtf4.disabled = false
   flagDiv43.style.color = '#5256A1'
   flagDiv43.style.border = '1px solid #5256A1'
 
+  //FOR THE fourth RESULT CARD
+  outerDivfr13.style.backgroundColor = '#EA8282' //red
+  outerDivfr13.style.color = 'white'
+  outerDivfr13.style.border = 'none'
+  
+  outerDivfr33.style.backgroundColor = '#60BF88' //green
+  outerDivfr33.style.color = 'white'
+  outerDivfr33.style.border = 'none'
+  
+  outerDivfr23.style.backgroundColor = 'white'
+  outerDivfr23.style.color = '#5256A1'
+  outerDivfr23.style.border = '1px solid #5256A1'
+  
+  outerDivfr43.style.backgroundColor = 'white'
+  outerDivfr43.style.color = '#5256A1'
+  outerDivfr43.style.border = '1px solid #5256A1'
+
 }
 
 function choice23(){
@@ -1072,6 +1327,23 @@ nextButtf4.disabled = false
   flagDiv43.style.color = '#5256A1'
   flagDiv43.style.border = '1px solid #5256A1'
 
+
+  //FOR THE fourth RESULT CARD
+  outerDivfr23.style.backgroundColor = '#EA8282' //red
+  outerDivfr23.style.color = 'white'
+  outerDivfr23.style.border = 'none'
+  
+  outerDivfr33.style.backgroundColor = '#60BF88' //green
+  outerDivfr33.style.color = 'white'
+  outerDivfr33.style.border = 'none'
+  
+  outerDivfr13.style.backgroundColor = 'white'
+  outerDivfr13.style.color = '#5256A1'
+  outerDivfr13.style.border = '1px solid #5256A1'
+  
+  outerDivfr43.style.backgroundColor = 'white'
+  outerDivfr43.style.color = '#5256A1'
+  outerDivfr43.style.border = '1px solid #5256A1'
 }
 
 function choice33(){
@@ -1136,6 +1408,23 @@ nextButtf4.disabled = false
   flagDiv43.style.color = '#5256A1'
   flagDiv43.style.border = '1px solid #5256A1'
 
+
+  //FOR THE fourth RESULT CARD
+  outerDivfr23.style.backgroundColor = 'white'
+  outerDivfr23.style.color = '#5256A1'
+  outerDivfr23.style.border = '1px solid #5256A1'
+  
+  outerDivfr33.style.backgroundColor = '#60BF88' //green
+  outerDivfr33.style.color = 'white'
+  outerDivfr33.style.border = 'none'
+  
+  outerDivfr13.style.backgroundColor = 'white'
+  outerDivfr13.style.color = '#5256A1'
+  outerDivfr13.style.border = '1px solid #5256A1'
+  
+  outerDivfr43.style.backgroundColor = 'white'
+  outerDivfr43.style.color = '#5256A1'
+  outerDivfr43.style.border = '1px solid #5256A1'
 }
 
 function choice43(){
@@ -1199,6 +1488,23 @@ function flagged43(){
     flagDiv23.style.color = '#5256A1'
     flagDiv23.style.border = '1px solid #5256A1'
 
+
+  //FOR THE fourth RESULT CARD
+  outerDivfr43.style.backgroundColor = '#EA8282' //red
+  outerDivfr43.style.color = 'white'
+  outerDivfr43.style.border = 'none'
+  
+  outerDivfr33.style.backgroundColor = '#60BF88' //green
+  outerDivfr33.style.color = 'white'
+  outerDivfr33.style.border = 'none'
+  
+  outerDivfr13.style.backgroundColor = 'white'
+  outerDivfr13.style.color = '#5256A1'
+  outerDivfr13.style.border = '1px solid #5256A1'
+  
+  outerDivfr23.style.backgroundColor = 'white'
+  outerDivfr23.style.color = '#5256A1'
+  outerDivfr23.style.border = '1px solid #5256A1'
 }
 
 
@@ -1249,12 +1555,17 @@ function fquests(){
         const randomCountry = countCap
   
   
-        document.getElementById('flagImage1').src = randomCountry[230].flag
+        document.getElementById('flagImager1').src = randomCountry[230].flag
 
         document.getElementById('namef1').innerHTML = randomCountry[30].name
         document.getElementById('namef2').innerHTML = randomCountry[230].name
         document.getElementById('namef3').innerHTML = randomCountry[180].name
         document.getElementById('namef4').innerHTML = randomCountry[160].name
+
+        document.getElementById('namefr1').innerHTML = randomCountry[30].name
+        document.getElementById('namefr2').innerHTML = randomCountry[230].name
+        document.getElementById('namefr3').innerHTML = randomCountry[180].name
+        document.getElementById('namefr4').innerHTML = randomCountry[160].name
       }
     }
     xhttp.open('GET', 'https://restcountries.eu/rest/v2/all?fields=name;capital;flag', true)
@@ -1265,6 +1576,12 @@ function fquests(){
 function resultShow(){
   doneCard.style.display = 'none'
   resultCard.style.display = 'block'
+  clickCount = 0
+}
+
+function resultShowf(){
+  doneCardf.style.display = 'none'
+  resultCardf1.style.display = 'block'
   clickCount = 0
 }
 
@@ -1479,6 +1796,73 @@ function nextButr(){
   xhttp.open('GET', 'https://restcountries.eu/rest/v2/all?fields=name;capital;flag', true)
   xhttp.send()
   
+}
+
+function flagResult(){
+  clickCount++            //increases the count of clickcount via iteration
+
+  var xhttp = new XMLHttpRequest()
+  xhttp.onreadystatechange = function(){
+    if(this.readyState === 4 && this.status === 200){
+      var countCap = JSON.parse(this.responseText)
+      const randomCountry = countCap
+
+      if(clickCount===1){    
+
+        resultCardf1.style.display = 'none'
+        resultCardf2.style.display = 'block'
+        resultCardf3.style.display = 'none'
+        resultCardf4.style.display = 'none'
+        
+        document.getElementById('flagImager2').src = randomCountry[211].flag
+
+        document.getElementById('namefr11').innerHTML = randomCountry[111].name
+        document.getElementById('namefr21').innerHTML = randomCountry[124].name
+        document.getElementById('namefr31').innerHTML = randomCountry[78].name
+        document.getElementById('namefr41').innerHTML = randomCountry[211].name
+        
+      }
+      
+      if(clickCount===2){
+        resultCardf1.style.display = 'none'
+        resultCardf2.style.display = 'none'
+        resultCardf3.style.display = 'block'
+        resultCardf4.style.display = 'none'
+  
+        
+        document.getElementById('flagImager3').src = randomCountry[103].flag
+
+        document.getElementById('namefr12').innerHTML = randomCountry[103].name
+        document.getElementById('namefr22').innerHTML = randomCountry[5].name
+        document.getElementById('namefr32').innerHTML = randomCountry[96].name
+        document.getElementById('namefr42').innerHTML = randomCountry[199].name
+      }
+  
+      if(clickCount===3){
+        resultCardf1.style.display = 'none'
+        resultCardf2.style.display = 'none'
+        resultCardf3.style.display = 'none'
+        resultCardf4.style.display = 'block'
+  
+        let lastflagresult =  document.getElementById('lastflagresult')
+        lastflagresult.value = 'Home'
+        lastflagresult.addEventListener('click', function(){
+          window.location.reload()
+        })
+        
+        document.getElementById('flagImager4').src = randomCountry[159].flag
+
+        document.getElementById('namefr13').innerHTML = randomCountry[167].name
+        document.getElementById('namefr23').innerHTML = randomCountry[77].name
+        document.getElementById('namefr33').innerHTML = randomCountry[159].name
+        document.getElementById('namefr43').innerHTML = randomCountry[38].name
+      } 
+
+    }
+  }
+  xhttp.open('GET', 'https://restcountries.eu/rest/v2/all?fields=name;capital;flag', true)
+  xhttp.send()
+
 }
        
 function prevButr(){

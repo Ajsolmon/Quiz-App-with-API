@@ -1,5 +1,5 @@
 body{
-    background-image: url(background.png);
+    background-image: url(https://i.ibb.co/s3DmmTK/background.png);
     background-size: 100vw 100vh;
     overflow: hidden;
 }
@@ -22,7 +22,7 @@ main{
 }
 
 #headtext{
-    background: url('flags.jpg');
+    background: url('https://i.ibb.co/sKcL7Tj/flags.jpg');
     font-size: 100px;
     background-clip: text;
     -webkit-background-clip: text;
@@ -36,6 +36,7 @@ main{
     color: white;
     text-align: center;
     margin-top: 20px;
+    font-family: 'Trade Winds', cursive;
 } 
 
 #quizType button{
@@ -47,7 +48,7 @@ main{
     border: none;
     outline: none;
     font-weight: bold;
-    font-family: sans-serif;
+    font-family: 'Trade Winds', cursive;
     margin: 30px 40px 0 0;
     cursor: pointer;
 }
@@ -897,7 +898,7 @@ main{
     margin: 10% 0 0 20px;
 }
 
-#flagImage{
+.flagImage{
     width: 100%;
     height: 100%;
 }
@@ -998,7 +999,7 @@ main{
     margin: 10% 0 0 20px;
 }
 
-#flagImage{
+.flagImage{
     width: 100%;
     height: 100%;
 }
@@ -1099,7 +1100,7 @@ main{
     margin: 10% 0 0 20px;
 }
 
-#flagImage{
+.flagImage{
     width: 100%;
     height: 100%;
 }
@@ -1151,7 +1152,445 @@ main{
 
 
 
-/* REPORT CARD :) */
+
+
+
+/*FLAG RESULT CARD  1*/
+
+#resultCardf1{
+    color: #5256A1;
+    font-family: sans-serif;
+    position: relative;
+    width: 300px;
+    height: 450px;
+    display: none;
+    cursor: pointer;
+}
+
+#resultCardf1 h2{
+    margin: 0;
+    color: white;
+}
+
+#resultCardf1 img{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -20px;
+    right: 0;
+    z-index: 10;
+}
+
+#questionWrap{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 90%;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+#flagsr{
+    width: 70px;
+    height: 40px;
+    box-shadow: 0 0 5px #5256A1;
+    border: 1px solid white;
+    border-radius: 3px;
+    margin: 10% 0 0 20px;
+    position: relative;
+}
+
+#flagsr>img{
+    position: absolute;
+    top: 0;
+    width: inherit;
+    height: inherit;
+}
+
+
+#resultCardf1 h4{
+    margin: 5% 0 5% 7%;
+    text-align: left;
+}
+
+#questions{
+    height: auto;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#questions div #namefr1,#questions div #namefr2,#questions div #namefr3,#questions div #namefr4{
+    padding: 5px 5px;
+    margin-left: 10px;
+}
+
+#questions > div{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    padding: 4px 5px;
+    text-align: left;
+    border: 1px solid #5256A1;
+    border-radius: 6px;
+    margin: 0 auto 10px auto;
+}
+
+#buttonDiv{
+    width: 100px;
+    height: 100px;
+    border: 1px solid navy;
+}
+
+.nextResult{
+    position: absolute;
+    right: 7%;
+    padding: 8px 14px;
+    border-radius: 4px;
+    background-color: #F9A826;
+    color: white;
+    border: none;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+/*FLAG RESULT CARD  2*/
+
+#resultCardf2{
+    color: #5256A1;
+    font-family: sans-serif;
+    position: relative;
+    width: 300px;
+    height: 450px;
+    display: none;
+    cursor: pointer;
+}
+
+#resultCardf2 h2{
+    margin: 0;
+    color: white;
+}
+
+#resultCardf2 img{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -20px;
+    right: 0;
+    z-index: 10;
+}
+
+#questionWrap{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 90%;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+#flagsr{
+    width: 70px;
+    height: 40px;
+    box-shadow: 0 0 5px #5256A1;
+    border: 1px solid white;
+    border-radius: 3px;
+    margin: 10% 0 0 20px;
+    position: relative;
+}
+
+#flagsr>img{
+    position: absolute;
+    top: 0;
+    width: inherit;
+    height: inherit;
+}
+
+
+#resultCardf2 h4{
+    margin: 5% 0 5% 7%;
+    text-align: left;
+}
+
+#questions{
+    height: auto;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#questions div #namefr11,#questions div #namefr21,#questions div #namefr31,#questions div #namefr41{
+    padding: 5px 5px;
+    margin-left: 10px;
+}
+
+#questions > div{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    padding: 4px 5px;
+    text-align: left;
+    border: 1px solid #5256A1;
+    border-radius: 6px;
+    margin: 0 auto 10px auto;
+}
+
+#buttonDiv{
+    width: 100px;
+    height: 100px;
+    border: 1px solid navy;
+}
+
+.nextResult{
+    position: absolute;
+    right: 7%;
+    padding: 8px 14px;
+    border-radius: 4px;
+    background-color: #F9A826;
+    color: white;
+    border: none;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+/*FLAG RESULT CARD  3*/
+
+#resultCardf3{
+    color: #5256A1;
+    font-family: sans-serif;
+    position: relative;
+    width: 300px;
+    height: 450px;
+    display: none;
+    cursor: pointer;
+}
+
+#resultCardf3 h2{
+    margin: 0;
+    color: white;
+}
+
+#resultCardf3 img{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -20px;
+    right: 0;
+    z-index: 10;
+}
+
+#questionWrap{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 90%;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+#flagsr{
+    width: 70px;
+    height: 40px;
+    box-shadow: 0 0 5px #5256A1;
+    border: 1px solid white;
+    border-radius: 3px;
+    margin: 10% 0 0 20px;
+    position: relative;
+}
+
+#flagsr>img{
+    position: absolute;
+    top: 0;
+    width: inherit;
+    height: inherit;
+}
+
+
+#resultCardf3 h4{
+    margin: 5% 0 5% 7%;
+    text-align: left;
+}
+
+#questions{
+    height: auto;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#questions div #namefr12,#questions div #namefr22,#questions div #namefr32,#questions div #namefr42{
+    padding: 5px 5px;
+    margin-left: 10px;
+}
+
+#questions > div{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    padding: 4px 5px;
+    text-align: left;
+    border: 1px solid #5256A1;
+    border-radius: 6px;
+    margin: 0 auto 10px auto;
+}
+
+#buttonDiv{
+    width: 100px;
+    height: 100px;
+    border: 1px solid navy;
+}
+
+.nextResult{
+    position: absolute;
+    right: 7%;
+    padding: 8px 14px;
+    border-radius: 4px;
+    background-color: #F9A826;
+    color: white;
+    border: none;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+/*FLAG RESULT CARD  4*/
+
+#resultCardf4{
+    color: #5256A1;
+    font-family: sans-serif;
+    position: relative;
+    width: 300px;
+    height: 450px;
+    display: none;
+    cursor: pointer;
+}
+
+#resultCardf4 h2{
+    margin: 0;
+    color: white;
+}
+
+#resultCardf4 img{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -20px;
+    right: 0;
+    z-index: 10;
+}
+
+#questionWrap{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 90%;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+#flagsr{
+    width: 70px;
+    height: 40px;
+    box-shadow: 0 0 5px #5256A1;
+    border: 1px solid white;
+    border-radius: 3px;
+    margin: 10% 0 0 20px;
+    position: relative;
+}
+
+#flagsr>img{
+    position: absolute;
+    top: 0;
+    width: inherit;
+    height: inherit;
+}
+
+
+#resultCardf4 h4{
+    margin: 5% 0 5% 7%;
+    text-align: left;
+}
+
+#questions{
+    height: auto;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#questions div #namefr13,#questions div #namefr23,#questions div #namefr33,#questions div #namefr43{
+    padding: 5px 5px;
+    margin-left: 10px;
+}
+
+#questions > div{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    padding: 4px 5px;
+    text-align: left;
+    border: 1px solid #5256A1;
+    border-radius: 6px;
+    margin: 0 auto 10px auto;
+}
+
+#buttonDiv{
+    width: 100px;
+    height: 100px;
+    border: 1px solid navy;
+}
+
+.nextResult{
+    position: absolute;
+    right: 7%;
+    padding: 8px 14px;
+    border-radius: 4px;
+    background-color: #F9A826;
+    color: white;
+    border: none;
+    margin-top: 10px;
+}
+
+
+
+
+
+/* REPORT CARD FOR COUNTRY :) */
 
 #doneCard{
     color: #5256A1;
@@ -1184,6 +1623,7 @@ main{
 
 #doneWrap h1{
     margin: 0 0 5px 0;
+    text-decoration: underline;
 }
 
 #doneWrap p{
@@ -1216,7 +1656,7 @@ main{
 }
 
 
-/* REPORT CARD :) */
+/* REPORT CARD FOR FLAG:) */
 
 #doneCardf{
     color: #5256A1;
@@ -1249,6 +1689,7 @@ main{
 
 #doneWrapf h1{
     margin: 0 0 5px 0;
+    text-decoration: underline;
 }
 
 #doneWrapf p{
@@ -1286,20 +1727,30 @@ main{
 
 
 @media (max-width: 600px) {
-    #buttDiv{
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 30px;
-        padding: 0 2%;
-        box-sizing: border-box;
-    }
+    
+#quizType{
+    font-family: cursive;
+    text-align: center;
+    display: block;
+}
 
-    #buttDiv button{
-        margin-top: 30px;
-        width: 40%;
-        margin: 0;
-    }
+
+#quizType p{
+    font-size: 30px;
+} 
+
+#quizType button{
+    width: 160px;
+    font-weight: bold;
+    margin: 30px 40px 0 0;
+}
+
+#buttDiv{
+    width: 100%;
+    justify-content: center;
+    margin-top: 15px;
+    padding: 0 2%;
+    box-sizing: border-box;
+}
+
 }
