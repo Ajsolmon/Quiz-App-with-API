@@ -1555,7 +1555,7 @@ function fquests(){
         const randomCountry = countCap
   
   
-        document.getElementById('flagImager1').src = randomCountry[230].flag
+        document.getElementById('flagImage1').src = randomCountry[230].flag
 
         document.getElementById('namef1').innerHTML = randomCountry[30].name
         document.getElementById('namef2').innerHTML = randomCountry[230].name
