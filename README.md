@@ -1,2 +1,3 @@
 # Quiz-App
-A quiz to test knowledge on countries, their capitals and their flags.
+A simple quiz webapp made with restcountry API,
+to test knowledge on countries, their capitals and their flags.
